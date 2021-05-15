@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Sea Secret
+v0.1
+
+
+## Single-page React app with ReactRouter
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
