@@ -1,15 +1,13 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Box from '@material-ui/core/Box';
 import Fade from '@material-ui/core/Fade';
-import { shadows } from '@material-ui/system';
 
 import logo from '../logo.svg';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -67,13 +65,9 @@ const useStyles = makeStyles((theme) => ({
 
 function MenuAppBar() {
   const classes = useStyles();
-  const [auth, setAuth] = React.useState(true);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  // const [auth, setAuth] = React.useState(true);
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-
-  const handleChange = (event) => {
-    setAuth(event.target.checked);
-  };
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -88,10 +82,7 @@ function MenuAppBar() {
 	    <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }}>
 	      	<AppBar position="static" >
 		        <Toolbar>
-		          <Typography variant="h6" className={classes.title}>
-		           Sea Secret 
-		          </Typography>
-		          {auth && (
+		          	<p className={classes.title}>Sea Secret </p>
 		            <div>
 		              <IconButton
 		                aria-label="menu"
@@ -125,7 +116,6 @@ function MenuAppBar() {
 		                <MenuItem onClick={handleClose}>contact</MenuItem>
 		              </Menu>
 		            </div>
-		          )}
 		        </Toolbar>
 	      	</AppBar>
 	    </Box>
@@ -139,25 +129,23 @@ function MenuAppBar() {
 		        <Toolbar className={classes.logocontainer}>
 			        <div>
 			        	<img src={logo} alt="Sea Secret" className='logo' />
-			        	<Typography variant="h6" className={classes.title}>
-				           Sea Secret 
-				        </Typography>
+			        	<p className={classes.title}>Sea Secret </p>				           
 			        </div>			        
 			        <div className={classes.menubar}>
-			        	<div class="container bg-trans">
-					    	<a class="link link--menuitem" href="#">about <span>who we are</span></a>
+			        	<div className="container bg-trans">
+					    	<a className="link link--menuitem" href="/">about <span>who we are</span></a>
 						</div>
-						<div class="container bg-trans">
-						    <a class="link link--menuitem" href="#">boat trips <span>around Naxos</span></a>
+						<div className="container bg-trans">
+						    <a className="link link--menuitem" href="/">boat trips <span>around Naxos</span></a>
 						</div>
-						<div class="container bg-trans">
-						    <a class="link link--menuitem" href="#">tours <span>available</span></a>
+						<div className="container bg-trans">
+						    <a className="link link--menuitem" href="/">tours <span>available</span></a>
 						</div>
-						<div class="container bg-trans">
-						    <a class="link link--menuitem" href="#">gallery <span></span></a>
+						<div className="container bg-trans">
+						    <a className="link link--menuitem" href="/">gallery <span></span></a>
 						</div>
-						<div class="container bg-trans">
-						    <a class="link link--menuitem" href="#">contact <span>↓</span></a>
+						<div className="container bg-trans">
+						    <a className="link link--menuitem" href="/">contact <span>↓</span></a>
 						</div>
 			        </div>			        	          
 		        </Toolbar>
@@ -167,14 +155,23 @@ function MenuAppBar() {
   );
 }
 
-class Header extends React.Component {
-	render() {
-		return (
-			<div>
-				<MenuAppBar />
-			</div>
-		);
-	}
+// class Header extends React.Component {
+// 	render() {
+// 		return (
+// 			<div>
+// 				<MenuAppBar />
+// 			</div>
+// 		);
+// 	}
+// }
+
+const Header = () => {
+	const classes = useStyles();
+	return (
+		<div>
+			<MenuAppBar />
+		</div>
+	)
 }
 
 export {Header}

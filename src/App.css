@@ -50,6 +50,9 @@
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+.section-b {
+  /*transform: translateY(-15%);*/
+}
 
 
 /*--------------------------------------------------------------------*/
@@ -60,7 +63,10 @@
 .MuiBox-root-219 {
   background-color: transparent !important;
 }
-
+.MuiPaper-root {
+  background-color: transparent !important;
+  color: #000000 !important;
+}
 
 /*--------------------------------------------------------------------*/
 /* menu item hove effect*/
@@ -129,3 +135,37 @@
   -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
   transition: transform 0.5s, opacity 0.5s;
 }
+
+/*--------------------------------------------------------------------*/
+/* strikethrough animation effect*/
+.letter { 
+  font-size: 10em; 
+  position: absolute;
+  left: calc(30px + 5vh);;
+}
+
+@keyframes strike{
+  0%   { width : 0; }
+  100% { width: 100%; }
+}
+.strike {
+  position: relative;
+  /*margin: 10px;*/
+}
+.strike::after {
+  content: ' ';
+  position: absolute;
+  top: 63%;
+  transform:translateY(-50%);
+  left: 20%;
+  width: 80%;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.87);;
+  animation-name: strike;
+  animation-duration: 2s;
+  animation-timing-function: easeInOutCirc;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards; 
+}
+/*--------------------------------------------------------------------*/
+/* menu item hove effect*/

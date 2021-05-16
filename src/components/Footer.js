@@ -1,18 +1,15 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
-import RoomServiceIcon from '@material-ui/icons/RoomService';
-import Icon from '@material-ui/core/Icon';
-import Tooltip from '@material-ui/core/Tooltip';
+// import Tooltip from '@material-ui/core/Tooltip';
 
 
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="#ffffff" align="left">
+    <Typography variant="body2" color="inherit" align="left">
       {'Copyright © '}
       <Link color="inherit" href="#">
         {new Date().getFullYear()} SEASECRET BOAT TRIPS
