@@ -24,3 +24,4 @@ yarn-error.log*
 
 # images
 /src/img/*.png
+/src/img/*.jpg

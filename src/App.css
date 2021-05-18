@@ -38,7 +38,7 @@
 /*CUSTOM CSS*/
 .logo { width: 5vmin; }
 .bg-trans { background-color: transparent; }
-.section-a {
+.section-1 {
   height: 100vh;
   position: relative;
   background-image: url('./img/p1.png');
@@ -50,10 +50,29 @@
   -moz-background-size: cover;
   -o-background-size: cover;
 }
-.section-b {
+.section-2 {
   /*transform: translateY(-15%);*/
 }
-
+@keyframes animatedRtL {
+  from {
+    background-position: 200% 100%;
+    opacity: 0;
+  }
+  to {
+    background-position: 100% 100%;
+    opacity: 1;
+  }
+}
+@keyframes animatedLtR{
+  from {
+    background-position: -100% 00%;
+    opacity: 0;
+  }
+  to {
+    background-position: 0% 0%;
+    opacity: 1;
+  }
+}
 
 /*--------------------------------------------------------------------*/
 /*material-ui CSS*/
@@ -144,9 +163,13 @@
   left: calc(30px + 5vh);;
 }
 
-@keyframes strike{
+@keyframes strikeA {
   0%   { width : 0; }
   100% { width: 100%; }
+}
+@keyframes strikeE {
+  0%   { width : 0; }
+  100% { width: 125%; }
 }
 .strike {
   position: relative;
@@ -155,17 +178,23 @@
 .strike::after {
   content: ' ';
   position: absolute;
-  top: 63%;
-  transform:translateY(-50%);
-  left: 20%;
-  width: 80%;
   height: 2px;
-  background: rgba(0, 0, 0, 0.87);;
-  animation-name: strike;
-  animation-duration: 2s;
-  animation-timing-function: easeInOutCirc;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.87);
+  animation-duration: 3s;
+  animation-timing-function: easeInOutQuad;
   animation-iteration-count: 1;
-  animation-fill-mode: backwards; 
+  animation-fill-mode: forwards; 
+}
+.strike-A::after {
+  animation-name: strikeA;
+  top: 63%;
+  left: 20%; 
+}
+.strike-E::after {
+  animation-name: strikeE;
+  top: 54%; 
+  left: -120%;
 }
 /*--------------------------------------------------------------------*/
 /* menu item hove effect*/
