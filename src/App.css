@@ -36,12 +36,19 @@
 
 /*--------------------------------------------------------------------*/
 /*CUSTOM CSS*/
-.logo { width: 5vmin; }
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+.logo { width: 15vw; }
+
 .bg-trans { background-color: transparent; }
-.section-1 {
+
+.section-head {
   height: 100vh;
   position: relative;
-  background-image: url('./img/p1.png');
+  background-image: url('./img/main.gif');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -50,9 +57,45 @@
   -moz-background-size: cover;
   -o-background-size: cover;
 }
-.section-2 {
+.section-1-intro {
   /*transform: translateY(-15%);*/
 }
+.section-2-head,
+.section-3-head {
+  height: 100vh;
+  position: relative;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+.section-2-head { background-image: url('./img/p2.jpg'); }
+.section-3-head { background-image: url('./img/p3.jpg'); }
+.section-2-body { margin-bottom: 150px; }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 50px 30px;
+}
+
+h2 p { margin:0px; }
+
+.trip-title {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
 @keyframes animatedRtL {
   from {
     background-position: 200% 100%;
@@ -85,6 +128,11 @@
 .MuiPaper-root {
   background-color: transparent !important;
   color: #000000 !important;
+}
+.MuiTypography-h5,
+.MuiTypography-body2,
+.MuiButton-root {
+  font-family: 'Raleway', sans-serif !important;
 }
 
 /*--------------------------------------------------------------------*/
@@ -171,6 +219,14 @@
   0%   { width : 0; }
   100% { width: 125%; }
 }
+@keyframes strikeC {
+  0%   { width : 100%; }
+  100% { width: 700%; }
+}
+@keyframes strikeA3 {
+  0%   { width : 0%; }
+  100% { width: 630%; }
+}
 .strike {
   position: relative;
   /*margin: 10px;*/
@@ -182,19 +238,66 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.87);
   animation-duration: 3s;
-  animation-timing-function: easeInOutQuad;
+  animation-timing-function: ease-in;
   animation-iteration-count: 1;
   animation-fill-mode: forwards; 
 }
 .strike-A::after {
   animation-name: strikeA;
-  top: 63%;
+  top: 58%;
   left: 20%; 
 }
 .strike-E::after {
   animation-name: strikeE;
-  top: 54%; 
+  top: 49%; 
   left: -120%;
 }
+.strike-C::after {
+  animation-name: strikeC;
+  top: 50%; 
+  left: -150%;
+}
+.strike-A3::after {
+  animation-name: 'strikeA3';
+  animation-delay: 1s;
+  width:0;
+  top: 58%;
+  left: 30%; 
+}
+.after-strike {
+  animation-name: textAppear;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  position: absolute;
+  right: -450%;
+  top: 40%;
+}
+@keyframes textAppear {
+  0%   { opacity : 0; }
+  100% { opacity: 1; }
+}
+.strike-btr::after {
+  animation-name: btr;
+  top: 105%; 
+  left: 0%;
+}
+@keyframes btr {
+  0%   { width : 0%; }
+  100% { width: 340%; }
+}
+.strike-btl::after {
+  animation-name: btl;
+  top: 105%; 
+  left: -170%;
+}
+@keyframes btl {
+  0%   { width : 0%; }
+  100% { width: 240%; }
+}
+
 /*--------------------------------------------------------------------*/
 /* menu item hove effect*/

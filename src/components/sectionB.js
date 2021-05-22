@@ -10,7 +10,7 @@ import bg from '../img/s2p2.jpg';
 
 const useStyles = makeStyles(theme => ({
 	root: {
-	    margin: '0 auto',
+	    margin: '0 auto 180px auto',
 	    display: 'flex',
 	    alignItems: 'start',
 	    flexDirection: 'column',

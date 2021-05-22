@@ -6,7 +6,7 @@ import "animate.css/animate.min.css";
 
 import Card from '@material-ui/core/Card';
 
-import bg from '../img/s2p1.jpg';
+import bg from '../img/s2p1.png';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -121,7 +121,8 @@ function SectionA() {
 							Explore the charming underwater world of the Aegean Sea with our snorkel equipment while riding one of our 4
 							electric dive scooters, or find the wind and experience your most epic wing foiling windsurfing, or kite surfing
 							sessions on remote spots that every rider dreams about. You can even book your private watersport lesson or rental
-							in advance.							
+							in advance.
+							<br/><br/>						
 						</p>
 					</Reveal>
 				}
@@ -131,6 +132,8 @@ function SectionA() {
 							Included are:<br/>
 							Boat with skipper, gasoline, refreshments (water, soft drinks and fruits), the use of snorkel equipment and 4
 							dive scooters. Optional sport equipment rental and courses are bookable.
+							<br/><br/>
+
 						</p>
 					</Reveal>
 				}							

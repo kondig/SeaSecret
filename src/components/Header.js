@@ -8,11 +8,11 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Box from '@material-ui/core/Box';
 import Fade from '@material-ui/core/Fade';
-
-import logo from '../logo.svg';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
 import FacebookIcon from '@material-ui/icons/Facebook';
+
+import logo from '../img/logo.png';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -60,6 +60,9 @@ const useStyles = makeStyles((theme) => ({
   icon: {
   	color: '#ffffff',
   	margin: '5px',
+  },
+  logo: {
+  	width: '300px'
   }
 }));
 
@@ -128,8 +131,7 @@ function MenuAppBar() {
 		        </Toolbar>
 		        <Toolbar className={classes.logocontainer}>
 			        <div>
-			        	<img src={logo} alt="Sea Secret" className='logo' />
-			        	<p className={classes.title}>Sea Secret </p>				           
+			        	<img src={logo} alt="Sea Secret" className={classes.logo} />				           
 			        </div>			        
 			        <div className={classes.menubar}>
 			        	<div className="container bg-trans">
