@@ -5,10 +5,14 @@ import {SectionA} from './sectionA';
 import {SectionB} from './sectionB';
 import {SectionC} from './sectionC';
 import {Letter} from './functional/letterTrans';
+import {LetterBtn} from './functional/letterBtn';
 import {BoatTrip1} from './boatTrip1';
 import {BoatTrip2} from './boatTrip2';
 import {BoatTrip3} from './boatTrip3';
 import {BoatTrip4} from './boatTrip4';
+import {AboutUs} from './aboutus'
+
+import video from '../img/ssdrone-min.mp4';
 
 const useStyles = makeStyles(theme => ({
 	sections: {
@@ -16,6 +20,9 @@ const useStyles = makeStyles(theme => ({
 	},
 	random: {
 		height: '200px',
+	},
+	videoTag: {
+		width: '100%',
 	}
 }));
 
@@ -25,6 +32,13 @@ const Main = () => {
 		<div className={classes.sections}> 
 			<div className="section-head">
 				<Header boxShadow={0} />
+				<LetterBtn phrase={`live your\nADVENTURE\n with us`} strike={'strike strike-m'} duration={2000}
+						position={{transform:'translate(10vw,25%)'}} 						
+						animator={`animate__animated animate__bounceInRight`} />
+				<video className={classes.videoTag} autoPlay loop muted>
+				    <source src={video} type='video/mp4' />
+				</video>
+	
 			</div>
 			<div className="section-1-intro">
 				<SectionA />
@@ -45,8 +59,11 @@ const Main = () => {
 			</div>
 			<div className="section-3-head">
 				<Letter letter={`A`} strike={'strike strike-A3'} duration={500}
-						position={{transform:'translate(25vw,60%)'}}
+						position={{transform:'translate(20vw,60%)'}}
 						animator={`animate__animated animate__bounceInLeft`} />
+			</div>
+			<div className="section-3-body">
+				<AboutUs />
 			</div>
 		</div>
 	)

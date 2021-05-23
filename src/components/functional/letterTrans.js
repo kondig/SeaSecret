@@ -1,7 +1,8 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Reveal from 'react-reveal';
 import "animate.css/animate.min.css";
+import useOnScreen from './useOnScreen';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -23,20 +24,6 @@ const useStyles = makeStyles(theme => ({
 		fontSize: '1.0em',
 	},
 }));
-
-function useOnScreen(ref) {
-  const [isIntersecting, setIntersecting] = useState(false)
-  const observer = new IntersectionObserver(
-    ([entry]) => setIntersecting(entry.isIntersecting)
-  )
-  useEffect(() => {
-    observer.observe(ref.current)
-    // Remove the observer as soon as the component is unmounted
-    return () => { observer.disconnect() }
-  }, [])
-  return isIntersecting
-}
-
 
 function LetterAnimation(props) {
   const classes = useStyles();
@@ -63,9 +50,9 @@ function LetterAnimation(props) {
 // export {LetterAnimation};
 
 class Letter extends React.Component {
-  constructor(props) {
-      super(props)
-  }
+  // constructor(props) {
+  //     super(props)
+  // }
 	render() {
     const { letter, phrase, strike, animator, duration, position } = this.props;
 		return (

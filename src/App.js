@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 //components
 import {Main} from './components/Main';
@@ -6,14 +5,9 @@ import {Footer} from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className="App">     
       <Main />
-      <div>
-          <img src={logo} className="App-logo" alt="logo" />
-      </div>
-      <Footer />
-      
+      <Footer />    
     </div>
   );
 }

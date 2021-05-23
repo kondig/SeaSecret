@@ -1,4 +1,4 @@
-import React, { createRef } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -78,7 +78,7 @@ function MediaCard(props) {
       </CardContent>
       <Divider />
       <CardActions className={classes.cardbtnarea}>
-        <Button size="medium" className={classes.btn} >
+        <Button size="large" className={classes.btn} >
           book now
         </Button>
       </CardActions>
@@ -87,10 +87,10 @@ function MediaCard(props) {
 }
 
 class SectionC extends React.Component {
-  constructor(props) {
-      super(props)
-      // this.myRef = createRef()  
-  }
+  // constructor(props) {
+  //     super(props)
+  //     this.myRef = createRef()  
+  // }
 	render() {
     // const { name, desc, image } = this.props;
 		return (

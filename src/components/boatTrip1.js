@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Reveal from 'react-reveal';
@@ -11,6 +11,8 @@ import Button from '@material-ui/core/Button';
 import Zoom from '@material-ui/core/Zoom';
 
 import bg from '../img/bt1.jpg';
+
+import useOnScreen from './functional/useOnScreen';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -85,19 +87,6 @@ const useStyles = makeStyles(theme => ({
   		padding: '15px 0px',
     },
 }));
-
-function useOnScreen(ref) {
-  const [isIntersecting, setIntersecting] = useState(false)
-  const observer = new IntersectionObserver(
-    ([entry]) => setIntersecting(entry.isIntersecting)
-  )
-  useEffect(() => {
-    observer.observe(ref.current)
-    // Remove the observer as soon as the component is unmounted
-    return () => { observer.disconnect() }
-  }, [])
-  return isIntersecting
-}
 
 function BoatTrip1() {
   const classes = useStyles();

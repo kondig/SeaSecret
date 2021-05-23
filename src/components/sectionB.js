@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 
 import Reveal from 'react-reveal';
@@ -7,6 +7,8 @@ import "animate.css/animate.min.css";
 import Card from '@material-ui/core/Card';
 
 import bg from '../img/s2p2.jpg';
+
+import useOnScreen from './functional/useOnScreen';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -64,18 +66,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-function useOnScreen(ref) {
-  const [isIntersecting, setIntersecting] = useState(false)
-  const observer = new IntersectionObserver(
-    ([entry]) => setIntersecting(entry.isIntersecting)
-  )
-  useEffect(() => {
-    observer.observe(ref.current)
-    // Remove the observer as soon as the component is unmounted
-    return () => { observer.disconnect() }
-  }, [])
-  return isIntersecting
-}
+
 
 function SectionB() {
   const classes = useStyles();

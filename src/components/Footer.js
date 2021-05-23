@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100px',
-    backgroundColor: '#7990a8',
+    backgroundColor: '#000000',
   },
   main: {
     marginTop: theme.spacing(2),
