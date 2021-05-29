@@ -8,19 +8,19 @@ import bg from '../img/s2p1.png';
 
 const useStyles = makeStyles(theme => ({
 	root: {
-	    margin: '0 auto',
-	    display: 'flex',
-	    alignItems: 'start',
-	    flexDirection: 'column',
-	    flexWrap: 'nowrap',
-	    borderRadius: '0',
-	    border: '0',	    
-	    '&:hover': {
-		      backgroundColor: '#ffffff'
-		    },
+    margin: '0 auto',
+    display: 'flex',
+    alignItems: 'start',
+    flexDirection: 'column',
+    flexWrap: 'nowrap',
+    borderRadius: '0',
+    border: '0',	    
+    '&:hover': {
+	      backgroundColor: '#ffffff'
+	    },
 		[theme.breakpoints.down('sm')]: {
-		      flexWrap: 'wrap',
-		    },
+	      flexWrap: 'wrap',
+	    },
 	},
 	container: {
 	    flexBasis: '100%',
@@ -70,14 +70,14 @@ function SectionA() {
 	    	<div ref={ref}>
 	    		{isOnScreen ?
 	    			<div className="strike strike-A"> 
-						<Reveal duration={2000} effect="animate__animated animate__bounceInRight">
-						  <div className={classes.letter}>A</div>
-						</Reveal>
-					</div>
-					:
-					<div  className={classes.letter}>A</div>
-				}
-			</div>    	
+							<Reveal duration={2000} effect="animate__animated animate__bounceInRight">
+							  <div className={classes.letter}>A</div>
+							</Reveal>
+						</div>
+						:
+						<div  className={classes.letter}>A</div>
+					}
+				</div>    	
       		<div ref={ref} className={classes.textcontainer}>
       			{isOnScreen &&
 	      			<Reveal duration={1000} effect="animate__animated animate__fadeInDown">

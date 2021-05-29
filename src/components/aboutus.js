@@ -17,7 +17,7 @@ const useStyles = makeStyles( theme => ({
   root: {
     maxWidth: 800,
     width: '100%',
-    margin: '20px 5px',
+    margin: '20px auto',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',

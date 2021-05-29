@@ -10,7 +10,9 @@ import {BoatTrip1} from './boatTrip1';
 import {BoatTrip2} from './boatTrip2';
 import {BoatTrip3} from './boatTrip3';
 import {BoatTrip4} from './boatTrip4';
-import {AboutUs} from './aboutus'
+import {AboutUs} from './aboutus';
+import {Contact} from './Contact';
+import {Gallery} from './Gallery';
 
 import video from '../img/ssdrone-min.mp4';
 
@@ -64,6 +66,8 @@ const Main = () => {
 			</div>
 			<div className="section-3-body">
 				<AboutUs />
+				<Contact />
+				<Gallery />
 			</div>
 		</div>
 	)

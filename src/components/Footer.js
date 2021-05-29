@@ -4,6 +4,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 // import Tooltip from '@material-ui/core/Tooltip';
+import Toolbar from '@material-ui/core/Toolbar';
+import InstagramIcon from '@material-ui/icons/Instagram';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 
 
@@ -25,22 +29,33 @@ const useStyles = makeStyles(theme => ({
     minHeight: '100px',
     backgroundColor: '#000000',
   },
-  main: {
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-  },
   footer: {
     padding: theme.spacing(2),
-    marginTop: 'auto',
+    marginTop: '10px',
     backgroundColor: '#000000',
-    color: '#ffffff'
+    color: '#ffffff',
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  cr: {
+    color: "#ffffff",
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: '40px',
+    [theme.breakpoints.down('sm')]: {
+      marginLeft: '5px',
+    }
+  },
+  smcontainer: {
+    display: 'flex',
+    justifyContent: 'end',
   },
   icon: {
-    color: "#ffffff",
-  }
+    color: '#ffffff',
+    margin: '5px',
+  },
 }));
 
 function Footer() {
@@ -49,9 +64,20 @@ function Footer() {
   return (
     <div className={classes.root}>
       <footer className={classes.footer} id="contact">
-        <Container maxWidth="lg" >
-          <Copyright className={classes.icon} />
-        </Container>
+        <div className={classes.cr}>
+          <Copyright  />
+        </div>       
+        <Toolbar className={classes.smcontainer}>
+          <Link color="inherit" href="#">
+            <MailOutlineIcon className={classes.icon} />
+          </Link>
+          <Link color="inherit" href="#">
+            <FacebookIcon className={classes.icon} />
+          </Link>
+          <Link color="inherit" href="#">
+            <InstagramIcon className={classes.icon} />
+          </Link>
+        </Toolbar>
       </footer>
     </div>
   );
