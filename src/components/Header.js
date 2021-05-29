@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     
     [theme.breakpoints.up('md')]: {
       position: 'absolute',
-  	  top: '10%',
+  	  top: '1%',
     },    
   },
   menuButton: {
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
   },
   smcontainer: {
   	display: 'flex',
-  	justifyContent: 'end',
+  	justifyContent: 'flex-end',
   },
   menubar: {
   	display: 'flex',
@@ -135,20 +135,20 @@ function MenuAppBar() {
 			        </div>			        
 			        <div className={classes.menubar}>
 			        	<div className="container bg-trans">
-					    	<a className="link link--menuitem" href="/">about <span>who we are</span></a>
-						</div>
-						<div className="container bg-trans">
-						    <a className="link link--menuitem" href="/">boat trips <span>around Naxos</span></a>
-						</div>
-						<div className="container bg-trans">
-						    <a className="link link--menuitem" href="/">tours <span>available</span></a>
-						</div>
-						<div className="container bg-trans">
-						    <a className="link link--menuitem" href="/">gallery <span></span></a>
-						</div>
-						<div className="container bg-trans">
-						    <a className="link link--menuitem" href="/">contact <span>↓</span></a>
-						</div>
+					    	<a className="link link--menuitem" href="/">about <span></span></a>
+							</div>
+							<div className="container bg-trans">
+							    <a className="link link--menuitem" href="/">boat trips <span></span></a>
+							</div>
+							<div className="container bg-trans">
+							    <a className="link link--menuitem" href="/">tours <span></span></a>
+							</div>
+							<div className="container bg-trans">
+							    <a className="link link--menuitem" href="/">gallery <span></span></a>
+							</div>
+							<div className="container bg-trans">
+							    <a className="link link--menuitem" href="/">contact <span></span></a>
+							</div>
 			        </div>			        	          
 		        </Toolbar>
 	      	</AppBar>

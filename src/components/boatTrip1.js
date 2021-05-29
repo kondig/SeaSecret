@@ -16,21 +16,23 @@ import useOnScreen from './functional/useOnScreen';
 
 const useStyles = makeStyles(theme => ({
 	root: {
-	    margin: '50px auto',
-	    width: '60%',
-	    display: 'flex',
-	    alignItems: 'start',
-	    flexDirection: 'column',
-	    flexWrap: 'nowrap',
-	    borderRadius: '0',
-	    border: '0',
-
-	    '&:hover': {
-		      backgroundColor: '#ffffff'
-		    },
+    margin: '50px auto',
+    width: '60%',
+    display: 'flex',
+    alignItems: 'start',
+    flexDirection: 'column',
+    flexWrap: 'nowrap',
+    borderRadius: '0',
+    border: '0',
+    overflow: 'hidden',	    
+    '&:hover': {
+      backgroundColor: '#ffffff'
+    },
 		[theme.breakpoints.down('sm')]: {
-		      flexWrap: 'wrap',
-		    },
+      flexWrap: 'wrap',
+      width: '95%',
+      overflow: 'hidden',
+    },
 	},
 	container: {
 	    flexBasis: '100%',
@@ -41,6 +43,7 @@ const useStyles = makeStyles(theme => ({
  		width: '40%',
  		[theme.breakpoints.down('sm')]: {
 		    padding: '0px 10px',
+		    width: '100%',
 		},
 	},
 	text: {
@@ -63,6 +66,9 @@ const useStyles = makeStyles(theme => ({
 		width: '100%',
 		overflow: 'visible',
 		boxShadow: '0 0 0 0',
+		[theme.breakpoints.down('sm')]: {
+		  flexWrap: 'wrap',
+		},
 	},
 	img: {		
 		width: '60%',
@@ -70,7 +76,10 @@ const useStyles = makeStyles(theme => ({
 		backgroundPosition: 'center',
 		backgroundSize: 'cover',
 		zIndex: '100',
-		// animation: 'animatedRtL 2s ease-in 1 normal',
+		[theme.breakpoints.down('sm')]: {
+		  width: '100%',
+			height: 400,
+		},
 	},
 	btn: {
 	  	backgroundColor: '#000000',
@@ -99,63 +108,43 @@ function BoatTrip1() {
       		<div  className={classes.textcontainer}>
       			{isOnScreen &&
 	      			<Reveal duration={1000}  effect="animate__animated animate__fadeInDown">
-						<p className="strike strike-btr trip-title">TO THE NORTH</p>
-					</Reveal>
-				}
-				{isOnScreen &&
-					<Reveal duration={400} effect="animate__animated animate__fadeInDown">
+								<p className="strike strike-btr trip-title">TO THE NORTH</p>
+							</Reveal>
+						}
 						<p className={classes.subtitle}>
 							Choose between the following destinations
 							<br/><br/>							
 						</p>
-					</Reveal>
-				}
-				{isOnScreen &&
-					<Reveal duration={400} effect="animate__animated animate__fadeInDown">
 						<p className={classes.text}>							
 							Snorkel trip to the shipwreck Mariana and the bird island Glaronissi							
 						</p>
-					</Reveal>
-				}
-				{isOnScreen &&
-					<Reveal duration={400} effect="animate__animated animate__fadeInDown">
 						<p className={classes.text}>							
 							Alyko/Pyrgaki for snorkeling and cliff jumping							
 						</p>
-					</Reveal>
-				}
-				{isOnScreen &&
-					<Reveal duration={400} effect="animate__animated animate__fadeInDown">
 						<p className={classes.text}>							
 							Paros, Naoussa for snorkeling and lunch							
 						</p>
-					</Reveal>
-				}
-				{isOnScreen &&
-					<Reveal duration={400} effect="animate__animated animate__fadeInDown">
 						<p className={classes.text}>							
 							Paros, Naoussa for sunset and dinner
 							<br/><br/>							
 						</p>
-					</Reveal>
-				}
 				<CardActions className={classes.cardbtnarea}>
-		        	<Button size="large" className={classes.btn} >
-		          		book now
-		        	</Button>
-	        	</CardActions>							
+        	<Button size="large" className={classes.btn} >
+          		book now
+        	</Button>
+	      </CardActions>							
 			</div>
-			{isOnScreen &&
-				<Zoom  in={true} timeout={1000}>
-			        <CardMedia
-				        className={classes.img}
-				        image={bg}
-				        title="TO THE NORTH"
-				    />	
-			    </Zoom>
-			}
-      	</Card>	
-</div>
+			{/*{isOnScreen &&
+				<Zoom  in={true} timeout={1000}>*/}
+      <CardMedia
+	        className={classes.img}
+	        image={bg}
+	        title="TO THE NORTH"
+	    />	
+			{/*			    </Zoom>
+						}*/}
+    </Card>	
+	</div>
   );
 }
 

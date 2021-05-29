@@ -6,15 +6,15 @@ import "animate.css/animate.min.css";
 
 const useStyles = makeStyles(theme => ({
 	root: {
-	    backgroundColor: 'transparent',
-	    // transform: 'translate(10vw,25%)',
-	    position: 'absolute',
-	    top: '50%',
+    backgroundColor: 'transparent',
+    position: 'absolute',
+    top: '50%',
 	},
 	phrase: {
 		fontSize: '2em',
 		margin: '10px',
 		position: 'relative',
+		textAlign: 'right',
 		[theme.breakpoints.up('md')]: {
 	      fontSize: '1em',
 	    },
@@ -40,14 +40,14 @@ function LetterAnimation(props) {
   return (
     <div className={classes.root} style={props.position}>
   		<div className={classes.textcontainer}>
-			<div className={props.strike}>
-				<Reveal duration={props.duration} effect={props.animator} >
-				  	<BreakLine text={props.phrase} className={classes.phrase} />
-				</Reveal>
-				<Button size="large" className="after-strike btn-strike">book now</Button>
+				<div className={props.strike}>
+					<Reveal duration={props.duration} effect={props.animator} >
+					  	<BreakLine text={props.phrase} className={classes.phrase} />
+					</Reveal>
+					<Button size="large" className="after-strike btn-strike">book now</Button>
+				</div>
 			</div>
 		</div>
-</div>
   );
 }
 

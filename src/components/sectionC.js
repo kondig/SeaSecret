@@ -21,6 +21,7 @@ const useStyles = makeStyles( theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    boxShadow: '0 0 0 0',
   },
   btn: {
   	backgroundColor: '#000000',

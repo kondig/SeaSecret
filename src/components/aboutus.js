@@ -10,6 +10,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import useOnScreen from './functional/useOnScreen';
+import Link from '@material-ui/core/Link';
 //image
 import ssBoat from '../img/ss-boat.jpg';
 
@@ -21,6 +22,7 @@ const useStyles = makeStyles( theme => ({
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    boxShadow: '0 0 0 0',
     [theme.breakpoints.down('sm')]: {
       maxWidth: '100%',
     }
@@ -130,7 +132,7 @@ function AboutUs(props) {
         />        
       </CardActionArea>
       <CardActions className={classes.cardbtnarea}>
-        <Button size="large" className={classes.btn} >
+        <Button size="large" className={classes.btn} href="https://www.axopar.fi/product-configurator/axopar-28-t-top?step=2" >
           more
         </Button>
       </CardActions>

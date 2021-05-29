@@ -15,21 +15,22 @@ import useOnScreen from './functional/useOnScreen';
 
 const useStyles = makeStyles(theme => ({
 	root: {
-	    margin: '50px auto',
-	    width: '60%',
-	    display: 'flex',
-	    alignItems: 'start',
-	    flexDirection: 'column',
-	    flexWrap: 'nowrap',
-	    borderRadius: '0',
-	    border: '0',
-
-	    '&:hover': {
-		      backgroundColor: '#ffffff'
-		    },
+    margin: '50px auto',
+    width: '60%',
+    display: 'flex',
+    alignItems: 'start',
+    flexDirection: 'column',
+    flexWrap: 'nowrap',
+    borderRadius: '0',
+    border: '0',
+    '&:hover': {
+      backgroundColor: '#ffffff'
+    },
 		[theme.breakpoints.down('sm')]: {
-		      flexWrap: 'wrap',
-		    },
+      flexWrap: 'wrap',
+      width: '95%',
+      overflow: 'hidden',
+    },
 	},
 	container: {
 	    flexBasis: '100%',
@@ -40,6 +41,7 @@ const useStyles = makeStyles(theme => ({
  		width: '100%',
  		[theme.breakpoints.down('sm')]: {
 		    padding: '0px 10px',
+		    width: '100%',
 		},
 	},
 	text: {
@@ -62,6 +64,9 @@ const useStyles = makeStyles(theme => ({
 		width: '100%',
 		overflow: 'visible',
 		boxShadow: '0 0 0 0',
+		[theme.breakpoints.down('sm')]: {
+		  flexWrap: 'wrap-reverse',
+		},
 	},
 	img: {
 		width: '100%',
@@ -69,7 +74,10 @@ const useStyles = makeStyles(theme => ({
 		backgroundPosition: 'right',
 		backgroundSize: 'contain',
 		zIndex: '100',
-		// animation: 'animatedRtL 2s ease-in 1 normal',
+		[theme.breakpoints.down('sm')]: {
+		  width: '100%',
+			height: 280,
+		},
 	},
 	btn: {
 	  	backgroundColor: '#000000',
@@ -93,55 +101,38 @@ function BoatTrip2() {
   const isOnScreen = useOnScreen(ref);
 
   return (
-    <div ref={ref} className={classes.root}>
+    <div className={classes.root}>
     	<Card className={classes.card}>
-    		{isOnScreen &&
-				<Zoom  in={true} timeout={1000}>
-			        <CardMedia
-				        className={classes.img}
-				        image={bg}
-				        title="TO THE WEST"
-				    />	
-			    </Zoom>
-			}
-      		<div className={classes.textcontainer}>
-      			{isOnScreen &&
-	      			<Reveal duration={1000}  effect="animate__animated animate__fadeInDown">
-						<p className="strike strike-btl trip-title">TO THE WEST</p>
-					</Reveal>
-				}
-				{isOnScreen &&
-					<Reveal duration={400} effect="animate__animated animate__fadeInDown">
-						<p className={classes.subtitle}>
-							Choose between the following destinations
-							<br/><br/>
-						</p>
-					</Reveal>
-				}
-				{isOnScreen &&
-					<Reveal duration={400} effect="animate__animated animate__fadeInDown">
-						<p className={classes.text}>
-							Small Cyclades: <br/>
-							Koufonissia, Iraklia, Schinoussa
-						</p>
-					</Reveal>
-				}
-				{isOnScreen &&
-					<Reveal duration={400} effect="animate__animated animate__fadeInDown">
-						<p className={classes.text}>
-							Paros, Antiparos, Tigani and Panderonissi
-							<br/><br/>
-						</p>
-					</Reveal>
-				}
-				<CardActions className={classes.cardbtnarea}>
-		        	<Button size="large" className={classes.btn} >
-		          		book now
-		        	</Button>
-	        	</CardActions>
-			</div>
-			
-      	</Card>
+		    <CardMedia
+	        className={classes.img}
+	        image={bg}
+	        title="TO THE WEST"
+			  />	
+    		<div ref={ref} className={classes.textcontainer}>
+    			{isOnScreen &&
+	      		<Reveal duration={1000}  effect="animate__animated animate__fadeInDown">
+							<p className="strike strike-btl trip-title">TO THE WEST</p>
+						</Reveal>
+					}
+					<p className={classes.subtitle}>
+						Choose between the following destinations
+						<br/><br/>
+					</p>
+					<p className={classes.text}>
+						Small Cyclades: <br/>
+						Koufonissia, Iraklia, Schinoussa
+					</p>
+					<p className={classes.text}>
+						Paros, Antiparos, Tigani and Panderonissi
+						<br/><br/>
+					</p>
+					<CardActions className={classes.cardbtnarea}>
+	        	<Button size="large" className={classes.btn} >
+	          		book now
+	        	</Button>
+        	</CardActions>
+			</div>		
+    </Card>
 </div>
   );
 }

@@ -13,15 +13,18 @@ const useStyles = makeStyles(theme => ({
 		fontSize: '10em',
 		margin: '10px',
 		position: 'relative',
-		// left: '15vw'
+		[theme.breakpoints.down('sm')]: {
+		    fontSize: '5em',
+		},
 	},
 	textcontainer: {
-		margin: '20px 15px',
+		margin: '20px 0px',
 		width: '100%',				
 	},
 	text: {
 		textAlign: 'left',
 		fontSize: '1.0em',
+
 	},
 }));
 
@@ -34,16 +37,16 @@ function LetterAnimation(props) {
   		<div ref={ref} className={classes.textcontainer}>
   			{isOnScreen ?
     			<div className={props.strike}> 
-					<Reveal duration={props.duration} effect={props.animator} >
-					  <div className={classes.letter}>{props.letter}</div>					  					  
-					</Reveal>
-					<span className="after-strike">{props.phrase}</span>
-				</div>
-				:
-				<div  className={classes.letter}>{props.letter}</div>
-			}						
-		</div>				
-</div>
+						<Reveal duration={props.duration} effect={props.animator} >
+						  <div className={classes.letter}>{props.letter}</div>					  					  
+						</Reveal>
+						<span className="after-strike">{props.phrase}</span>
+					</div>
+					:
+					<div  className={classes.letter}>{props.letter}</div>
+				}						
+			</div>				
+	</div>
   );
 }
 
@@ -56,7 +59,7 @@ class Letter extends React.Component {
 	render() {
     const { letter, phrase, strike, animator, duration, position } = this.props;
 		return (
-			<div>
+
 				<LetterAnimation
 		          letter = { letter }
 		          phrase = { phrase }
@@ -65,7 +68,7 @@ class Letter extends React.Component {
 		          duration = { duration }
 		          position = { position }		          
          		/>
-			</div>
+
 		);
 	}
 }

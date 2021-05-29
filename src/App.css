@@ -58,7 +58,8 @@ body {
   -o-background-size: cover;*/
 }
 .section-1-intro {
-  /*transform: translateY(-15%);*/
+  /*position: relative;*/
+  overflow: hidden;
 }
 .section-2-head,
 .section-3-head {
@@ -77,7 +78,7 @@ body {
   align-items: flex-start;
   align-content: flex-start;
 }
-.section-2-head { background-image: url('./img/p2.jpg'); }
+.section-2-head { background-image: url('./img/p2.jpg'); overflow: hidden; }
 .section-3-head { background-image: url('./img/p3.jpg'); }
 .section-2-body { margin-bottom: 150px; }
 .section-3-body {
@@ -88,6 +89,9 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 50px 30px;
+}
+.card-container > div {
+  flex: 1 0 50%
 }
 
 h2 p { margin:0px; }
@@ -102,6 +106,11 @@ h2 p { margin:0px; }
   position:  absolute;
   top: 0;
   left: 0;
+}
+
+.phrase p {
+  margin: 0;
+  text-align: right;
 }
 
 @keyframes animatedRtL {
@@ -144,7 +153,7 @@ h2 p { margin:0px; }
 }
 
 /*--------------------------------------------------------------------*/
-/* menu item hove effect*/
+/* menu item hover effect*/
 .container--menuitem {
   /*width: 100%;*/
   padding: 2rem;
@@ -164,23 +173,34 @@ h2 p { margin:0px; }
 .link--menuitem {
   font-style: italic;
   font-weight: 700;
-  font-size: 2em;
+  font-size: 1em;
   padding: 0 10px 20px;
   -webkit-transition: color 0.5s;
   transition: 0.5s;
   z-index: 0;
 }
+.link--menuitem::after {
+  content: '';
+  width: 0px;
+  height: 2px;
+  display: block;
+  background: #ffffff;
+  transition: 700ms;
+}
+.link--menuitem:hover::after {
+  width: 100%;
+}
 .link--menuitem:hover {
   color: #ffffff;
 }
 .link--menuitem:hover::before {
-  -webkit-transform: rotate3d(0,0,1,135deg) scale3d(1,1,1);
-  transform: rotate3d(0,0,1,135deg) scale3d(1,1,1);
+  /*-webkit-transform: rotate3d(0,0,1,135deg) scale3d(1,1,1);
+  transform: rotate3d(0,0,1,135deg) scale3d(1,1,1);*/
 }
 .link--menuitem:hover span {
-  opacity: 1;
+  /*opacity: 1;
   -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);*/
 }
 .link--menuitem::before {
   content: '';
@@ -221,7 +241,7 @@ h2 p { margin:0px; }
 
 @keyframes strikeA {
   0%   { width : 0; }
-  100% { width: 78%; }
+  100% { width: 150%; }
 }
 @keyframes strikeE {
   0%   { width : 0; }
@@ -233,7 +253,7 @@ h2 p { margin:0px; }
 }
 @keyframes strikeA3 {
   0%   { width : 0%; }
-  100% { width: 500%; }
+  100% { width: 600%; }
 }
 @keyframes strikeM {
   0%   { width : 0%; }
@@ -254,9 +274,8 @@ h2 p { margin:0px; }
 .strike::after {
   content: ' ';
   position: absolute;
-  height: 5px;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.87);
+  width: 0%;
+  background: rgba(0, 0, 0, 1);
   animation-duration: 3s;
   animation-timing-function: ease-in;
   animation-iteration-count: 1;
@@ -264,34 +283,37 @@ h2 p { margin:0px; }
 }
 .strike-A::after {
   animation-name: strikeA;
-  top: 58%;
-  left: 20%; 
+  height: 10px;
+  top: 56%;
+  left: 0%; 
 }
 .strike-E::after {
   animation-name: strikeE;
+  height: 10px;
   top: 49%; 
   left: -120%;
 }
 .strike-C::after {
   animation-name: strikeC;
+  height: 10px;
   top: 50%; 
   left: -150%;
 }
 .strike-A3::after {
   animation-name: 'strikeA3';
   animation-delay: 1s;
+  height: 10px;
   width:0;
-  top: 58%;
+  top: 57%;
   left: 30%; 
 }
 .strike-m::after {
   animation-name: 'strikeM';
   animation-delay: 1s;
   width:0;
-  height:4px;
-  font-size:3em;
-  top: 85%;
-  left: 30%; 
+  height:1px;
+  top: 28%;
+  left: 99%; 
 }
 
 .after-strike {
@@ -312,15 +334,17 @@ h2 p { margin:0px; }
 }
 .strike-btr::after {
   animation-name: btr;
+  height: 2px;
   top: 105%; 
   left: 0%;
 }
 @keyframes btr {
   0%   { width : 0%; }
-  100% { width: 340%; }
+  100% { width: 78vw; }
 }
 .strike-btl::after {
   animation-name: btl;
+  height: 2px;
   top: 105%; 
   left: -170%;
 }
@@ -332,7 +356,8 @@ h2 p { margin:0px; }
   background-color: #000000 !important;
   color: #ffffff !important;
   text-transform: lowercase !important;
-  right: -350%;
+  right: -345%;
+  top: -23%;
 }
 .btn-strike:hover {
   background-color: #1bdcd1 !important;
@@ -340,14 +365,99 @@ h2 p { margin:0px; }
 }
 
 .strike-Con::after {
+  height: 5px;
   animation-name: strikeCon;
   top: 48%; 
-  left: -400%;
-  
+  left: -400%;  
 }
 @keyframes strikeCon {
   0%   { width : 0%; }
-  100% { width: 101vw; }
+  100% { width: 120vw; }
 }
 /*--------------------------------------------------------------------*/
-/* menu item hove effect*/
+/* media queries*/
+
+@media (max-width:600px) {
+  .section-head {
+    height: 100%;
+  }
+  .strike::after {
+    height: 1px; 
+  }
+  
+  .strike-Con::after {
+    left: 0% !important;
+  }
+  @keyframes strikeCon {
+    0%   { width : 0%; }
+    100% { width: 100vw; }
+  }
+  @keyframes strikeC {
+    0%   { width : 100%; }
+    100% { width: 450%; }
+  }
+  .strike-A::after {
+    height: 10px !important;
+    top: 56%;
+    left: 21%; 
+  }
+  @keyframes strikeA {
+    0%   { width : 0; }
+    100% { width: 120%; }
+  }
+  .strike-E::after {
+    height: 10px;
+    top: 46.4%; 
+    left: -50%;
+  }
+  @keyframes strikeE {
+    0%   { width : 0; }
+    100% { width: 200%; }
+  }
+  .strike-C::after {
+    height: 4px;
+    top: 50%; 
+    left: -150%;
+  }
+  .strike-A3::after {
+    height: 4px;
+    top: 57%;
+    left: 15%; 
+  }
+  @keyframes strikeA3 {
+    0%   { width : 0%; }
+    100% { width: 300%; }
+  }
+  .section-2-head,
+  .section-3-head {
+    height: 250px;
+    background-size: contain !important;
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -o-background-size: contain !important;
+    background-attachment: scroll;
+  }
+  .after-strike {
+    right: -200%;
+    top: 30%;
+  }
+  .btn-strike {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    text-transform: lowercase !important;
+    left: 150%;
+    top: -20% !important;
+  }
+  .strike-m::after {
+    animation-name: 'strikeM';
+    animation-delay: 1s;
+    width:0;
+    height:1px;
+    top: 28%;
+    left: 99%; 
+  }
+  @keyframes strikeM {
+    0%   { width : 0%; }
+    100% { width: 133%; }
+  }
+}

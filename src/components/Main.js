@@ -21,7 +21,10 @@ const useStyles = makeStyles(theme => ({
 		position: 'relative',
 	},
 	random: {
-		height: '200px',
+		height: '100px',
+		[theme.breakpoints.down('sm')]: {
+	      height: '0'
+	  	},
 	},
 	videoTag: {
 		width: '100%',
@@ -36,13 +39,17 @@ const Main = () => {
 				<Header boxShadow={0} />
 				<LetterBtn phrase={`live your\nADVENTURE\n with us`} strike={'strike strike-m'} duration={2000}
 						position={{transform:'translate(10vw,25%)'}} 						
-						animator={`animate__animated animate__bounceInRight`} />
+						animator={`animate__animated animate__FadeInUp phrase`} />
 				<video className={classes.videoTag} autoPlay loop muted>
 				    <source src={video} type='video/mp4' />
 				</video>
 	
 			</div>
 			<div className="section-1-intro">
+				<Letter letter={`A`} strike={'strike strike-A'} duration={2000} 
+						position={{transform:'translate(-30%,10%)'}}
+						animator={`animate__animated animate__fadeIn`}  />
+				<div className={classes.random}></div>				
 				<SectionA />
 				<SectionB />
 				<SectionC />				
@@ -50,7 +57,7 @@ const Main = () => {
 			<div className="section-2-head">
 				<Letter letter={`C`} strike={'strike strike-C'} phrase={`CYCLADES`} duration={2000} 
 						position={{transform:'translate(10vw,25%)'}}
-						animator={`animate__animated animate__bounceInRight`}  />
+						animator={`animate__animated animate__fadeIn`}  />
 			</div>
 			<div className="section-2-body">
 				<h3>BOAT TRIPS</h3>
@@ -62,7 +69,7 @@ const Main = () => {
 			<div className="section-3-head">
 				<Letter letter={`A`} strike={'strike strike-A3'} duration={500}
 						position={{transform:'translate(20vw,60%)'}}
-						animator={`animate__animated animate__bounceInLeft`} />
+						animator={`animate__animated animate__fadeIn`} />
 			</div>
 			<div className="section-3-body">
 				<AboutUs />

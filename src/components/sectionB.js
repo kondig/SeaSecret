@@ -5,28 +5,28 @@ import Reveal from 'react-reveal';
 import "animate.css/animate.min.css";
 
 import Card from '@material-ui/core/Card';
-
+import CardMedia from '@material-ui/core/CardMedia';
 import bg from '../img/s2p2.jpg';
 
 import useOnScreen from './functional/useOnScreen';
 
 const useStyles = makeStyles(theme => ({
 	root: {
-	    margin: '0 auto 180px auto',
-	    display: 'flex',
-	    alignItems: 'start',
-	    flexDirection: 'column',
-	    flexWrap: 'nowrap',
-	    borderRadius: '0',
-	    border: '0',
-	    backgroundColor: 'transparent',
-	    	    
-	    '&:hover': {
-		      backgroundColor: '#ffffff'
-		    },
+    margin: '0 auto 180px auto',
+    display: 'flex',
+    alignItems: 'start',
+    flexDirection: 'column',
+    flexWrap: 'nowrap',
+    borderRadius: '0',
+    border: '0',
+    backgroundColor: 'transparent',    	    
+    '&:hover': {
+      backgroundColor: '#ffffff'
+    },
 		[theme.breakpoints.down('sm')]: {
-		      flexWrap: 'wrap',
-		    },
+      flexWrap: 'wrap',
+      overflow: 'hidden',
+    },
 	},
 	container: {
 	    flexBasis: '100%',
@@ -34,13 +34,16 @@ const useStyles = makeStyles(theme => ({
 	},
 	letter: {
 		fontSize: '10em',
-		margin: '10px',
+		margin: '35px 0 0 0',
 		position: 'relative',
 		left: 'calc(-20vw)'
 	},
 	textcontainer: {
 		margin: '20px 15px',
-		width: '45%',				
+		width: '50%',
+		[theme.breakpoints.down('sm')]: {
+	    width: '100%',
+	  },				
 	},
 	text: {
 		textAlign: 'left',
@@ -53,16 +56,28 @@ const useStyles = makeStyles(theme => ({
 	card: {
 		display: 'flex',
 		justifyContent: 'flex-end',
-		backgroundImage: `url(${bg})`,
-  		backgroundPosition: '0% 0%',
-  		backgroundAttachment: 'scroll',
-  		backgroundRepeat: 'no-repeat',
-  		backgroundSize: '50%',
-  		animation: 'animatedLtR 2s ease-in 1 normal',
+		boxShadow: '0 0 0 0',
+		borderRadius: '0',
+		// backgroundImage: `url(${bg})`,
+		// backgroundPosition: '0% 0%',
+		// backgroundAttachment: 'scroll',
+		// backgroundRepeat: 'no-repeat',
+		// backgroundSize: '50%',
+		// animation: 'animatedLtR 2s ease-in 1 normal',
+		[theme.breakpoints.down('sm')]: {
+	      flexWrap: 'wrap',
+	      justifyContent: 'center',
+	  },
 	},
 	img: {
-		margin: '0 0 0 auto',
-		width: '400px'
+		margin: '0 0 0 0',
+		width: '50vw',
+		height: '100%',
+		[theme.breakpoints.down('sm')]: {
+	      width: '100%',
+	      height: 250,
+	      backgroundSize: 'contain',
+	  },
 	}
 }));
 
@@ -74,36 +89,33 @@ function SectionB() {
   const isOnScreen = useOnScreen(ref)
   return (
     <div className={classes.root}>
-    	<Card className={classes.card}> 	
-      		<div ref={ref} className={classes.textcontainer}>
+    	<Card className={classes.card}>
+    		<CardMedia
+	        className={classes.img}
+	        image={bg}
+	        title=""
+	    	/> 	
+      	<div ref={ref} className={classes.textcontainer}>
       			{isOnScreen ?
-	    			<div className="strike strike-E"> 
-						<Reveal duration={2000} effect="animate__animated animate__bounceInRight">
-						  <div className={classes.letter}>E</div>
-						</Reveal>
-					</div>
-					:
-					<div  className={classes.letter}>E</div>
-				}
-      			{isOnScreen &&
-	      			<Reveal duration={1000} effect="animate__animated animate__fadeInDown">
+	    				<div className="strike strike-E"> 
+								<Reveal duration={2000} effect="animate__animated animate__fadeIn">
+								  <div className={classes.letter}>E</div>
+								</Reveal>
+							</div>
+							:
+							<div  className={classes.letter}>E</div>
+						}
 						<p className={classes.title}>EXPLORE</p>
-					</Reveal>
-				}
-				{isOnScreen &&
-					<Reveal duration={400} effect="animate__animated animate__fadeInDown">
 						<p className={classes.text}>
 							From relaxing boat trips with snorkeling and relaxation to adventurous water sports
 							getaways and from selected island discoveries to private charters and transfers,
 							choose the trip that better suits your needs and create unforgettable memories for
 							you and your close ones.
-						</p>
-					</Reveal>
-				}							
-			</div>				
-      	</Card>	
-</div>
+						</p>						
+				</div>				
+      </Card>	
+		</div>
   );
-}
+} 
 
 export {SectionB};

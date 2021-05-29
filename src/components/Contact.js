@@ -28,7 +28,8 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',    
 		[theme.breakpoints.down('sm')]: {
 	      flexWrap: 'wrap',
-	    },
+	      minHeight: '750px',
+	  },
 	},
 	container: {
 	    flexBasis: '100%',
@@ -39,6 +40,7 @@ const useStyles = makeStyles(theme => ({
  		width: '30%',
  		[theme.breakpoints.down('sm')]: {
 		    padding: '0px 10px',
+		    width: '100%',
 		},
 	},
 	text: {
@@ -68,7 +70,12 @@ const useStyles = makeStyles(theme => ({
 		maxWidth: 800,
 		position: 'relative',
 		zIndex: 15,
-		margin: '3vw 0'
+		margin: '3vw 0',
+		[theme.breakpoints.down('sm')]: {
+		    flexWrap: 'wrap',
+		    justifyContent: 'center',
+		    flexWrap: 'wrap-reverse',
+		},
 	},
 	img: {		
 		width: '100%',
@@ -115,12 +122,20 @@ const useStyles = makeStyles(theme => ({
 		left: '0'
 	},
 	imagearea: {
- 		width: '40%'
+ 		width: '40%',
+ 		[theme.breakpoints.down('sm')]: {
+		    width: '95%',
+		},
   },
   letterabs: {
   	position: 'absolute',
   	left: '-20%',
   	top: '2%',
+  	[theme.breakpoints.down('sm')]: {
+		    left: '0%',
+  			top: '3%',
+  			fontSize: '7px',
+		},
   },
   banner: {
   	position: 'absolute',
@@ -151,7 +166,11 @@ const useStyles = makeStyles(theme => ({
   	// justifyContent: 'center',
   	position: 'absolute',
   	bottom: '13vh',
-  	left: 0
+  	left: 0,
+  	[theme.breakpoints.down('sm')]: {
+		    left: '15px',
+		    bottom: '5vh',
+		},
   }
 }));
 
@@ -189,43 +208,21 @@ function Contact() {
 
  				 
 	      <div className={classes.textcontainer}>
-	      		{isOnScreen &&
-		      		<Reveal duration={1000}  effect="animate__animated animate__fadeInDown">
-									<p className={classes.htext}>WHY BOOK WITH US</p>
-							</Reveal>
-						}
-						
-						{isOnScreen &&
-							<Reveal duration={400} effect="animate__animated animate__fadeInDown">
+								<p className={classes.htext}>WHY BOOK WITH US</p>
 								<p className={classes.text}>							
 									<br/><br/>
 									brand new boat							
 								</p>
-							</Reveal>
-						}
-						{isOnScreen &&
-							<Reveal duration={400} effect="animate__animated animate__fadeInDown">
 								<p className={classes.text}>							
 									explore the best spots							
 								</p>
-							</Reveal>
-						}
-						{isOnScreen &&
-							<Reveal duration={400} effect="animate__animated animate__fadeInDown">
 								<p className={classes.text}>							
 									lots of different tours						
 								</p>
-							</Reveal>
-						}
-						{isOnScreen &&
-							<Reveal duration={400} effect="animate__animated animate__fadeInDown">
 								<p className={classes.text}>							
 									25 years of sailing experience in the Cyclades
 									<br/><br/>							
-								</p>
-							</Reveal>
-						}
-													
+								</p>						
 				</div>			
     </Card>
     <div className={classes.banner}>
