@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -81,12 +81,16 @@ const useStyles = makeStyles(theme => ({
 	      height: 200,
 	      backgroundSize: 'contain',
 	  },
+	  [theme.breakpoints.down('md')]: {
+      width: '100%',
+      height: 400,
+      backgroundSize: 'cover',
+    },
 	}
 }));
 
 function SectionA() {
   const classes = useStyles();
-  const ref = useRef();
   return (
     <div className={classes.root}>
     	<Card className={classes.card}>	    	    	

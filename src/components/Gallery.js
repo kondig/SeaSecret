@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 import ImageGridList from './functional/grid';
 
 

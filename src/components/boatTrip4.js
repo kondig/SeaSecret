@@ -8,7 +8,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Zoom from '@material-ui/core/Zoom';
+// import Zoom from '@material-ui/core/Zoom';
 
 import bg from '../img/bt4.jpg';
 import useOnScreen from './functional/useOnScreen';
@@ -77,7 +77,13 @@ const useStyles = makeStyles(theme => ({
 		zIndex: '100',
 		[theme.breakpoints.down('sm')]: {
 	    width: '100%',
+	    backgroundSize: 'contain',
 			height: 280,
+		},
+		[theme.breakpoints.down('md')]: {
+	    width: '100%',
+	    backgroundSize: 'cover',
+			height: 320,
 		},
 	},
 	btn: {

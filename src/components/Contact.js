@@ -1,15 +1,12 @@
 import React, { useRef } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
-import Reveal from 'react-reveal';
 import "animate.css/animate.min.css";
 
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import Zoom from '@material-ui/core/Zoom';
+// import Zoom from '@material-ui/core/Zoom';
 
 import bg from '../img/contact.jpg';
 
@@ -72,9 +69,9 @@ const useStyles = makeStyles(theme => ({
 		zIndex: 15,
 		margin: '3vw 0',
 		[theme.breakpoints.down('sm')]: {
-		    flexWrap: 'wrap',
 		    justifyContent: 'center',
 		    flexWrap: 'wrap-reverse',
+		    height: '880px',
 		},
 	},
 	img: {		
@@ -165,11 +162,11 @@ const useStyles = makeStyles(theme => ({
   	// flexDirection: 'column',
   	// justifyContent: 'center',
   	position: 'absolute',
-  	bottom: '13vh',
+  	bottom: '20vh',
   	left: 0,
   	[theme.breakpoints.down('sm')]: {
-		    left: '15px',
-		    bottom: '5vh',
+		    left: '30px',
+		    bottom: '27vh',
 		},
   }
 }));
@@ -204,25 +201,22 @@ function Contact() {
 		          		book now
 		        	</Button>
 			    </CardActions>
-			  </div>
-
- 				 
+			  </div>				 
 	      <div className={classes.textcontainer}>
-								<p className={classes.htext}>WHY BOOK WITH US</p>
-								<p className={classes.text}>							
-									<br/><br/>
-									brand new boat							
-								</p>
-								<p className={classes.text}>							
-									explore the best spots							
-								</p>
-								<p className={classes.text}>							
-									lots of different tours						
-								</p>
-								<p className={classes.text}>							
-									25 years of sailing experience in the Cyclades
-									<br/><br/>							
-								</p>						
+					<p className={classes.htext}>WHY BOOK WITH US</p>
+					<p className={classes.text}>							
+						<br/><br/>
+						brand new boat							
+					</p>
+					<p className={classes.text}>							
+						explore the best spots							
+					</p>
+					<p className={classes.text}>							
+						lots of different tours						
+					</p>
+					<p className={classes.text}>							
+						25 years of sailing experience in the Cyclades							
+					</p>						
 				</div>			
     </Card>
     <div className={classes.banner}>

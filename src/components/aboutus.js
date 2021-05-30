@@ -10,7 +10,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 import useOnScreen from './functional/useOnScreen';
-import Link from '@material-ui/core/Link';
 //image
 import ssBoat from '../img/ss-boat.jpg';
 

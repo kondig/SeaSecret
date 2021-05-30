@@ -9,6 +9,12 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: 'transparent',
     position: 'absolute',
     top: '50%',
+    [theme.breakpoints.up('sm')]: {
+	    top: '65%',
+	  },
+    [theme.breakpoints.up('md')]: {
+	    top: '50%',
+	  },
 	},
 	phrase: {
 		fontSize: '2em',
@@ -17,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 		textAlign: 'right',
 		[theme.breakpoints.up('md')]: {
 	      fontSize: '1em',
-	    },
+	  },
 	},
 	textcontainer: {
 		margin: '20px 15px',

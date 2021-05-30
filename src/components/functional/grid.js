@@ -26,9 +26,9 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     overflow: 'hidden',
   },
-  img: {
-    height: 400,
-  },
+  // img: {
+  //   height: 400,
+  // },
 }));
 
 /**

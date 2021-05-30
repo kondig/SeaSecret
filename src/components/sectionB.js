@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down('sm')]: {
       flexWrap: 'wrap',
       overflow: 'hidden',
-    },
+    },    
 	},
 	container: {
 	    flexBasis: '100%',
@@ -36,7 +36,10 @@ const useStyles = makeStyles(theme => ({
 		fontSize: '10em',
 		margin: '35px 0 0 0',
 		position: 'relative',
-		left: 'calc(-20vw)'
+		left: 'calc(-20vw)',
+		[theme.breakpoints.down('sm')]: {
+	    fontSize: '5em',
+	  },
 	},
 	textcontainer: {
 		margin: '20px 15px',
@@ -65,19 +68,27 @@ const useStyles = makeStyles(theme => ({
 		// backgroundSize: '50%',
 		// animation: 'animatedLtR 2s ease-in 1 normal',
 		[theme.breakpoints.down('sm')]: {
-	      flexWrap: 'wrap',
+	    flexWrap: 'wrap-reverse',
 	      justifyContent: 'center',
 	  },
+	  [theme.breakpoints.down('md')]: {
+      flexWrap: 'wrap-reverse',
+    },
 	},
 	img: {
 		margin: '0 0 0 0',
 		width: '50vw',
 		height: '100%',
 		[theme.breakpoints.down('sm')]: {
-	      width: '100%',
-	      height: 250,
-	      backgroundSize: 'contain',
+      width: '100%',
+      height: 250,
+      backgroundSize: 'contain',
 	  },
+	  [theme.breakpoints.down('md')]: {
+      width: '100%',
+      height: 400,
+      backgroundSize: 'cover',
+    },
 	}
 }));
 

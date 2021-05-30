@@ -12,16 +12,33 @@ import Divider from '@material-ui/core/Divider';
 //images
 import s2c1 from '../img/s2c1.jpg';
 import s2c2 from '../img/s2c2.jpeg';
+import s2c3 from '../img/s2c3.jpg';
 import s2c4 from '../img/s2c4.jpg';
 
 const useStyles = makeStyles( theme => ({
   root: {
-    maxWidth: 345,
+    maxWidth: 340,
     margin: '20px 5px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     boxShadow: '0 0 0 0',
+    [theme.breakpoints.up('sm')]: {
+      flex: '0 0 50%',
+      maxWidth: 300,
+    },   
+    [theme.breakpoints.up('md')]: {
+      flex: '0 0 50%',
+      maxWidth: 440,
+    },
+    [theme.breakpoints.up('lg')]: {
+      flex: '0 0 25%',
+      maxWidth: 290,
+    },
+    [theme.breakpoints.up('xl')]: {
+      flex: '0 0 25%',
+      maxWidth: 370,
+    },
   },
   btn: {
   	backgroundColor: '#000000',
@@ -40,7 +57,7 @@ const useStyles = makeStyles( theme => ({
     height: '350px',
     cursor: 'default',
     [theme.breakpoints.down('sm')]: {
-      height: '200px',
+      height: '250px',
     },
   },
   text: {
@@ -118,7 +135,7 @@ class SectionC extends React.Component {
         />
      		<MediaCard
 					name = { `PRIVATE CHARTER` }
-					image = { s2c1 }
+					image = { s2c3 }
           desc = { 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit augue sed ex pellentesque tincidunt.' 
                     + 'Phasellus eu lectus a est lobortis feugiat. Ut eget congue nisi. Duis malesuada tempus est. In sed interdum elit, non placerat arcu.'
                     + 'Vestibulum et tellus risus. Maecenas eleifend elementum mauris. Etiam malesuada scelerisque laoreet. Aenean vitae volutpat urna, nec'

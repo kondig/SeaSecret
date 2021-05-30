@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import {Header} from './Header';
 import {SectionA} from './sectionA';
@@ -15,6 +15,7 @@ import {Contact} from './Contact';
 import {Gallery} from './Gallery';
 
 import video from '../img/ssdrone-min.mp4';
+import mainImage from '../img/main.png'
 
 const useStyles = makeStyles(theme => ({
 	sections: {
@@ -26,23 +27,33 @@ const useStyles = makeStyles(theme => ({
 	      height: '0'
 	  	},
 	},
-	videoTag: {
-		width: '100%',
-	}
+	videoTag: { width: '100%', },
+	mainImage: { width: '100%' }
 }));
 
 const Main = () => {
 	const classes = useStyles();
+	const [count, setCount] = useState(0);
+	useEffect(() => {
+    const timer = setTimeout(() => { setCount('Timeout called!'); }, 6000);
+	    return () => clearTimeout(timer);
+	}, []);
 	return (
 		<div className={classes.sections}> 
 			<div className="section-head">
 				<Header boxShadow={0} />
 				<LetterBtn phrase={`live your\nADVENTURE\n with us`} strike={'strike strike-m'} duration={2000}
 						position={{transform:'translate(10vw,25%)'}} 						
-						animator={`animate__animated animate__FadeInUp phrase`} />
-				<video className={classes.videoTag} autoPlay loop muted>
-				    <source src={video} type='video/mp4' />
-				</video>
+						animator={`animate__animated animate__fadeIn phrase`} />
+
+				{ count < 6000 ?
+					<img src={mainImage} alt="Sea Secret" className={classes.mainImage}/>
+					:
+					<video className={classes.videoTag} autoPlay loop muted>
+					    <source src={video} type='video/mp4' />
+					</video>
+				}		
+				
 	
 			</div>
 			<div className="section-1-intro">
@@ -55,7 +66,7 @@ const Main = () => {
 				<SectionC />				
 			</div>
 			<div className="section-2-head">
-				<Letter letter={`C`} strike={'strike strike-C'} phrase={`CYCLADES`} duration={2000} 
+				<Letter letter={`C`} strike={'strike strike-C'} phrase={`CYCLADES`} duration={3000} 
 						position={{transform:'translate(10vw,25%)'}}
 						animator={`animate__animated animate__fadeIn`}  />
 			</div>
