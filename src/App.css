@@ -112,6 +112,16 @@ h2 p { margin:0px; }
   margin: 0;
   text-align: right;
 }
+.mobile-link {
+  outline: none;
+  font-size: 1.1em;
+  text-decoration: none;
+  color: #000000;
+}
+.mobile-link:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
 
 @keyframes animatedRtL {
   from {

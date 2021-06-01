@@ -63,14 +63,15 @@ const Main = () => {
 				<div className={classes.random}></div>				
 				<SectionA />
 				<SectionB />
+				<div id="tours"></div>
 				<SectionC />				
 			</div>
-			<div className="section-2-head">
+			<div className="section-2-head" id="bt">
 				<Letter letter={`C`} strike={'strike strike-C'} phrase={`CYCLADES`} duration={3000} 
 						position={{transform:'translate(10vw,25%)'}}
 						animator={`animate__animated animate__fadeIn`}  />
 			</div>
-			<div className="section-2-body">
+			<div className="section-2-body" >
 				<h3>BOAT TRIPS</h3>
 				<BoatTrip1 />
 				<BoatTrip2 />
@@ -82,9 +83,11 @@ const Main = () => {
 						position={{transform:'translate(20vw,60%)'}}
 						animator={`animate__animated animate__fadeIn`} />
 			</div>
-			<div className="section-3-body">
+			<div className="section-3-body" id="about">
 				<AboutUs />
+				<div id="contact"></div>
 				<Contact />
+				<div id="gallery"></div>
 				<Gallery />
 			</div>
 		</div>

@@ -68,13 +68,13 @@ function Footer() {
           <Copyright  />
         </div>       
         <Toolbar className={classes.smcontainer}>
-          <Link color="inherit" href="#">
+          <Link color="inherit" target="_blank" rel="noopener" href="#">
             <MailOutlineIcon className={classes.icon} />
           </Link>
-          <Link color="inherit" href="#">
+          <Link color="inherit" target="_blank" rel="noopener" href="https://www.facebook.com/seasecretboattrips/">
             <FacebookIcon className={classes.icon} />
           </Link>
-          <Link color="inherit" href="#">
+          <Link color="inherit" target="_blank" rel="noopener" href="https://www.instagram.com/seasecretboattrips/?hl=en" >
             <InstagramIcon className={classes.icon} />
           </Link>
         </Toolbar>

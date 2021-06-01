@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Link from '@material-ui/core/Link';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -63,6 +64,16 @@ const useStyles = makeStyles((theme) => ({
   },
   logo: {
   	width: '300px'
+  },
+  mi: {
+  	zIndex:'1000',
+  	'&:hover': {
+  		backgroundColor: '#000000',
+  		color: '#ffffff',
+  	}
+  },
+  separator: {
+  	height: '35px',
   }
 }));
 
@@ -112,11 +123,22 @@ function MenuAppBar() {
 		                onClose={handleClose}
 		                TransitionComponent={Fade}
 		              >
-		                <MenuItem onClick={handleClose}>about</MenuItem>
-		                <MenuItem onClick={handleClose}>boat trips</MenuItem>
-		                <MenuItem onClick={handleClose}>tours</MenuItem>
-		                <MenuItem onClick={handleClose}>gallery</MenuItem>
-		                <MenuItem onClick={handleClose}>contact</MenuItem>
+		              	<MenuItem onClick={handleClose} className={classes.separator}></MenuItem>
+		                <MenuItem onClick={handleClose} className={classes.mi}>
+		                	<a className="mobile-link" href="#about">about</a>
+		                </MenuItem>
+		                <MenuItem onClick={handleClose} className={classes.mi}>
+		                	<a className="mobile-link" href="#bt">boat trips</a>
+		                </MenuItem>
+		                <MenuItem onClick={handleClose} className={classes.mi}>
+		                	<a className="mobile-link" href="#tours">tours</a>
+		                </MenuItem>
+		                <MenuItem onClick={handleClose} className={classes.mi}>
+		                	<a className="mobile-link" href="#gallery">gallery</a>
+		                </MenuItem>
+		                <MenuItem onClick={handleClose} className={classes.mi}>
+		                	<a className="mobile-link" href="#contact">contact</a>
+		                </MenuItem>
 		              </Menu>
 		            </div>
 		        </Toolbar>
@@ -125,9 +147,15 @@ function MenuAppBar() {
 	    <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}>
 	      	<AppBar position="relative" className={classes.appbardesk} >
 		        <Toolbar className={classes.smcontainer}>
-		        	<MailOutlineIcon className={classes.icon} />
-		        	<FacebookIcon className={classes.icon} />
-		        	<InstagramIcon className={classes.icon} />
+		        	<Link color="inherit" target="_blank" rel="noopener" href="#">
+		            <MailOutlineIcon className={classes.icon} />
+		          </Link>
+		          <Link color="inherit" target="_blank" rel="noopener" href="https://www.facebook.com/seasecretboattrips/">
+		            <FacebookIcon className={classes.icon} />
+		          </Link>
+		          <Link color="inherit" target="_blank" rel="noopener" href="https://www.instagram.com/seasecretboattrips/?hl=en" >
+		            <InstagramIcon className={classes.icon} />
+		          </Link>
 		        </Toolbar>
 		        <Toolbar className={classes.logocontainer}>
 			        <div>
@@ -135,19 +163,19 @@ function MenuAppBar() {
 			        </div>			        
 			        <div className={classes.menubar}>
 			        	<div className="container bg-trans">
-					    	<a className="link link--menuitem" href="/">about <span></span></a>
+					    	<a className="link link--menuitem" href="#about">about <span></span></a>
 							</div>
 							<div className="container bg-trans">
-							    <a className="link link--menuitem" href="/">boat trips <span></span></a>
+							    <a className="link link--menuitem" href="#bt">boat trips <span></span></a>
 							</div>
 							<div className="container bg-trans">
-							    <a className="link link--menuitem" href="/">tours <span></span></a>
+							    <a className="link link--menuitem" href="#tours">tours <span></span></a>
 							</div>
 							<div className="container bg-trans">
-							    <a className="link link--menuitem" href="/">gallery <span></span></a>
+							    <a className="link link--menuitem" href="#gallery">gallery <span></span></a>
 							</div>
 							<div className="container bg-trans">
-							    <a className="link link--menuitem" href="/">contact <span></span></a>
+							    <a className="link link--menuitem" href="#contact">contact <span></span></a>
 							</div>
 			        </div>			        	          
 		        </Toolbar>

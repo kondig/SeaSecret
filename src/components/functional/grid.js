@@ -64,8 +64,8 @@ export default function ImageGridList() {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }}>
-        <GridList cellHeight={300} className={classes.gridList} cols={1}>
+      <Box display={{ xs: 'block', sm: 'none', md: 'none', lg: 'none', xl: 'none' }}>
+        <GridList cellHeight={170} className={classes.gridList} cols={1}>
           {tileData.map((tile) => (
             <GridListTile key={tile.img} cols={tile.cols || 1}>
               <img src={tile.img} alt={tile.title} className={classes.img} />
@@ -73,7 +73,16 @@ export default function ImageGridList() {
           ))}
         </GridList>
       </Box>
-      <Box display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}>
+      <Box display={{ xs: 'none', sm: 'block', md: 'none', lg: 'none', xl: 'none' }}>
+        <GridList cellHeight={400} className={classes.gridList} cols={2}>
+          {tileData.map((tile) => (
+            <GridListTile key={tile.img} cols={tile.cols || 1}>
+              <img src={tile.img} alt={tile.title} className={classes.img} />
+            </GridListTile>
+          ))}
+        </GridList>
+      </Box>
+      <Box display={{ xs: 'none', md: 'none', lg: 'block', xl: 'block' }}>
         <GridList cellHeight={400} className={classes.gridList} cols={4}>
           {tileData.map((tile) => (
             <GridListTile key={tile.img} cols={tile.cols || 1}>

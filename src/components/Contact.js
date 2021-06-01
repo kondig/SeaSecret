@@ -111,6 +111,12 @@ const useStyles = makeStyles(theme => ({
 		justifyContent: 'flex-end',
 		padding: '15px 0px',
 		marginTop: '15px',
+		[theme.breakpoints.down('md')]: {
+		    padding: '15px 10px',
+		},
+		[theme.breakpoints.up('md')]: {
+		    padding: '15px 0px',
+		},
   },
   letter: {
 		fontSize: '10em',
@@ -121,7 +127,7 @@ const useStyles = makeStyles(theme => ({
 	imagearea: {
  		width: '40%',
  		[theme.breakpoints.down('sm')]: {
-		    width: '95%',
+		    width: '100%',
 		},
   },
   letterabs: {
@@ -167,6 +173,10 @@ const useStyles = makeStyles(theme => ({
   	[theme.breakpoints.down('sm')]: {
 		    left: '30px',
 		    bottom: '27vh',
+		},
+		[theme.breakpoints.up('sm')]: {
+		    left: '30px',
+		    bottom: '22vh',
 		},
   }
 }));
