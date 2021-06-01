@@ -479,7 +479,9 @@ h2 p { margin:0px; }
   .section-head {
     height: 100%;
   }
-
+  .strike-A::after {
+    height: 5px !important; 
+  }
   .strike-E::after {
     height: 5px;
     top: 47.5%; 
