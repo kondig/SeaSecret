@@ -4,6 +4,9 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import Button from '@material-ui/core/Button';
+import axios from 'axios';
+
+import emailjs from 'emailjs-com';
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -49,8 +52,11 @@ const useStyles = makeStyles((theme) => ({
   btnContainer: {
     display: 'flex',
     justifyContent: 'flex-end',
-  }
+  },
+  msg: { textAlign: 'center',}
 }));
+
+
 
 function BookModal() {
   const classes = useStyles();
@@ -58,6 +64,8 @@ function BookModal() {
   const [message, setMessage] = React.useState();
   const [name, setName] = React.useState();
   const [email, setEmail] = React.useState();
+  const [status, setStatus] = React.useState('');
+  const [btntext, setBtntext] = React.useState('Submit');
 
   const handleOpen = () => {
     setOpen(true);
@@ -69,8 +77,30 @@ function BookModal() {
 
   const handleSubmit= (e) => {
       e.preventDefault();
-      console.log(name,email,message);
+      // console.log(name,email,message);
+      setBtntext('Sending...');
+      emailjs.send('service_q5rphf9','SSbt-4cqaecd', templateParams, 'user_G3PrDBibDDPOlb11ZGcMO')
+      .then((response) => {
+        showMsg();
+        setBtntext('Sent'); 
+        setTimeout(() => { resetForm(); }, 6000)
+        console.log('SUCCESS!', response.status, response.text);
+      }, (err) => {
+        setBtntext('Failed to send');
+         console.log('FAILED...', err);
+      });
     }
+
+  const templateParams = {
+      name: name,
+      message: message,
+      email: email
+  };
+ 
+
+
+  const resetForm = () => { setName(''); setEmail(''); setMessage(''); setBtntext('Submit'); setStatus('');}
+  const showMsg = () => { setStatus('Thank you for contacting us!')}
 
   return (
     <div>
@@ -91,8 +121,7 @@ function BookModal() {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-            <h2 id="transition-modal-title" className={classes.heading}>book now</h2>
-            <p id="transition-modal-description"></p>
+            <h2 id="transition-modal-title" className={classes.heading}>book now</h2>           
             <form id="contact-form" method="POST" onSubmit={e => {handleSubmit(e)}}>
               <div className={classes.formGroup}>
                   <label htmlFor="name">Name</label>
@@ -113,9 +142,10 @@ function BookModal() {
                             value={message}></textarea>
               </div>
               <div className={classes.btnContainer}>
-                <Button type="submit" size='large' className={classes.btn}>Submit</Button>
+                <Button type="submit" size='large' className={classes.btn}>{btntext}</Button>
               </div>             
             </form>
+            <p id="transition-modal-description" className={classes.msg}>{status}</p>
           </div>
         </Fade>
       </Modal>

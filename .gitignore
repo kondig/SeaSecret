@@ -28,3 +28,6 @@ yarn-error.log*
 /src/img/*.jpeg
 /src/img/*.gif
 /src/img/*.mp4
+
+#SMTP
+/api/config.js
