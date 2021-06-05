@@ -1,19 +1,25 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
 import Reveal from 'react-reveal';
 import "animate.css/animate.min.css";
+import {BookAniModal} from '../bookAniModal';
 
 const useStyles = makeStyles(theme => ({
 	root: {
     backgroundColor: 'transparent',
     position: 'absolute',
     top: '50%',
-    [theme.breakpoints.up('sm')]: {
-	    top: '65%',
+    [theme.breakpoints.down('sm')]: {
+	    top: '53%',
+	    left: '-17%'
 	  },
-    [theme.breakpoints.up('md')]: {
-	    top: '50%',
+    [theme.breakpoints.up('sm')]: {
+	    top: '63%',
+	    left: '0',
+	  },
+	  [theme.breakpoints.up('md')]: {
+	    top: '63%',
+	    left: '0',
 	  },
 	},
 	phrase: {
@@ -50,7 +56,7 @@ function LetterAnimation(props) {
 					<Reveal duration={props.duration} effect={props.animator} >
 					  	<BreakLine text={props.phrase} className={classes.phrase} />
 					</Reveal>
-					<Button size="large" className="after-strike btn-strike">book now</Button>
+					<BookAniModal />
 				</div>
 			</div>
 		</div>

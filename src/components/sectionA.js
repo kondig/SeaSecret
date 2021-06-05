@@ -46,6 +46,13 @@ const useStyles = makeStyles(theme => ({
 			left: '0%',
 			transform: 'translateY(0%)',
 			padding: '20px 15px 0px 15px',
+	  },
+	  [theme.breakpoints.down('md')]: {
+	    width: '100%',
+	    position: 'relative',
+			left: '0%',
+			transform: 'translateY(0%)',
+			padding: '20px 15px 0px 15px',
 	  },		
 	},
 	text: {
@@ -86,7 +93,7 @@ const useStyles = makeStyles(theme => ({
       height: 400,
       backgroundSize: 'cover',
     },
-	}
+	}, 
 }));
 
 function SectionA() {
@@ -118,7 +125,7 @@ function SectionA() {
 						dive scooters.<br/>
 						<br/>Optional sport equipment rental and courses are bookable.
 						<br/><br/>
-					</p>				
+					</p>			
 				</div>
 				{/*<img src={bg} alt="" className={classes.img}/>*/}
 				<CardMedia

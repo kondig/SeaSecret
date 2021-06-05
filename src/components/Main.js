@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import Loader from 'react-loader-spinner'
 import {Header} from './Header';
 import {SectionA} from './sectionA';
 import {SectionB} from './sectionB';
@@ -14,8 +15,8 @@ import {AboutUs} from './aboutus';
 import {Contact} from './Contact';
 import {Gallery} from './Gallery';
 
-import video from '../img/ssdrone-min.mp4';
-import mainImage from '../img/main.png'
+import video from '../img/ssdrone-cut.mp4';
+// import mainImage from '../img/main.png'
 
 const useStyles = makeStyles(theme => ({
 	sections: {
@@ -26,9 +27,25 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down('sm')]: {
 	      height: '0'
 	  	},
+	  	[theme.breakpoints.down('md')]: {
+	      height: '0'
+	  	},
 	},
 	videoTag: { width: '100%', },
-	mainImage: { width: '100%' }
+	mainImage: { width: '100%' },
+	mainArea: {
+		position:'relative',
+	    height: '100vh',
+	    display: 'flex',
+	    justifyContent: 'center',
+	    [theme.breakpoints.down('md')]: {
+	      height: '70vh',
+	      overflow: 'hidden',
+	  	},
+	},
+	mainLoader: {
+		alignSelf: 'center',
+	}
 }));
 
 const Main = () => {
@@ -42,16 +59,28 @@ const Main = () => {
 		<div className={classes.sections}> 
 			<div className="section-head">
 				<Header boxShadow={0} />
-				<LetterBtn phrase={`live your\nADVENTURE\n with us`} strike={'strike strike-m'} duration={2000}
+				
+				{/*<img src={mainImage} alt="Sea Secret" className={classes.mainImage}/>*/}
+				{ count < 6000 ?					
+					<div className={classes.mainArea} > 
+			          <Loader
+			            type="ThreeDots"
+			            color="#1bdcd1"
+			            height={100}
+			            width={100}
+			            timeout={6000}
+			            className={classes.mainLoader}
+			          />
+			        </div>
+					:
+					<div>
+						<LetterBtn phrase={`live your\nADVENTURE\n with us`} strike={'strike strike-m'} duration={2000}
 						position={{transform:'translate(10vw,25%)'}} 						
 						animator={`animate__animated animate__fadeIn phrase`} />
-
-				{ count < 6000 ?
-					<img src={mainImage} alt="Sea Secret" className={classes.mainImage}/>
-					:
-					<video className={classes.videoTag} autoPlay loop muted>
-					    <source src={video} type='video/mp4' />
-					</video>
+						<video className={classes.videoTag} autoPlay loop muted>
+					    	<source src={video} type='video/mp4' />
+						</video>
+					</div>					
 				}		
 				
 	

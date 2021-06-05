@@ -68,10 +68,10 @@ body {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -292,41 +292,47 @@ h2 p { margin:0px; }
   animation-fill-mode: forwards;  
 }
 .strike-A::after {
+  -webkit-animation-name: strikeA;
   animation-name: strikeA;
   height: 10px;
   top: 56%;
   left: 0%; 
 }
 .strike-E::after {
+  -webkit-animation-name: strikeE;
   animation-name: strikeE;
   height: 10px;
-  top: 46.5%; 
+  top: 46.4%; 
   left: -120%;
 }
 .strike-C::after {
+  -webkit-animation-name: strikeC;
   animation-name: strikeC;
   height: 10px;
   top: 50%; 
   left: -150%;
 }
 .strike-A3::after {
-  animation-name: 'strikeA3';
+  -webkit-animation-name: strikeA3;
+  animation-name: strikeA3;
   animation-delay: 1s;
-  height: 9px;
+  height: 7px;
   width:0;
-  top: 57%;
+  top: 56.5%;
   left: 29%; 
 }
 .strike-m::after {
-  animation-name: 'strikeM';
+  -webkit-animation-name: strikeM;
+  animation-name: strikeM;
   animation-delay: 1s;
   width:0;
   height:1px;
-  top: 27.5%;
+  top: 28.4%;
   left: 98%; 
 }
 
 .after-strike {
+  -webkit-animation-name: textAppear;
   animation-name: textAppear;
   animation-duration: 1s;
   animation-delay: 3s;
@@ -343,6 +349,7 @@ h2 p { margin:0px; }
   100% { opacity: 1; }
 }
 .strike-btr::after {
+  -webkit-animation-name: btr;
   animation-name: btr;
   height: 2px;
   top: 105%; 
@@ -353,6 +360,7 @@ h2 p { margin:0px; }
   100% { width: 78vw; }
 }
 .strike-btl::after {
+  -webkit-animation-name: btl;
   animation-name: btl;
   height: 2px;
   top: 105%; 
@@ -376,6 +384,7 @@ h2 p { margin:0px; }
 
 .strike-Con::after {
   height: 5px;
+  -webkit-animation-name: strikeCon;
   animation-name: strikeCon;
   top: 48%; 
   left: -400%;  
@@ -420,7 +429,7 @@ h2 p { margin:0px; }
   }
   .strike-E::after {
     height: 5px;
-    top: 46.9%; 
+    top: 47.3%; 
     left: -50%;
   }
   @keyframes strikeE {
@@ -432,50 +441,51 @@ h2 p { margin:0px; }
     top: 50%; 
     left: -150%;
   }
+  @keyframes strikeA3 {
+    0%   { width : 0%; }
+    100% { width: 300%; }
+  }
   .strike-A3::after {
     height: 4px;
     top: 57%;
     left: 15%; 
   }
-  @keyframes strikeA3 {
-    0%   { width : 0%; }
-    100% { width: 300%; }
-  }
+  
   .section-2-head,
   .section-3-head {
-    height: 250px;
-    background-size: contain !important;
+    height: 300px; 
     -webkit-background-size: contain !important;
     -moz-background-size: contain !important;
     -o-background-size: contain !important;
+    background-size: contain !important;
     background-attachment: scroll;
+  }
+  
+  .btn-strike {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    text-transform: lowercase !important;
+    left: 110%;
+    top: -45% !important;
   }
   .after-strike {
     right: -200%;
     top: 30%;
   }
-  .btn-strike {
-    background-color: #000000 !important;
-    color: #ffffff !important;
-    text-transform: lowercase !important;
-    left: 150%;
-    top: -20% !important;
-  }
   .strike-m::after {
-    animation-name: 'strikeM';
     animation-delay: 1s;
     width:0;
-    height:1px;
+    height:0.9px;
     top: 28%;
-    left: 99%; 
+    left: 98%; 
   }
   @keyframes strikeM {
     0%   { width : 0%; }
-    100% { width: 133%; }
+    100% { width: 138%; }
   }
 }
 
-@media (max-width:960px) {
+@media (min-width:601px) and (max-width:960px) {
   .section-head {
     height: 100%;
   }
@@ -483,8 +493,8 @@ h2 p { margin:0px; }
     height: 5px !important; 
   }
   .strike-E::after {
-    height: 5px;
-    top: 47.5%; 
+    height: 6px;
+    top: 46.5%; 
     left: -50%;
   }
   @keyframes strikeE {
@@ -498,5 +508,46 @@ h2 p { margin:0px; }
   }
   .after-strike {   
     top: 30%;
+  }
+  .strike-m::after {
+    animation-delay: 1s;
+    width:0;
+    height:1px;
+    top: 28.1%;
+    left: 98%; 
+  }
+  @keyframes strikeM {
+    0%   { width : 0%; }
+    100% { width: 333%; }
+  }
+  .strike-A3::after {
+    height: 4px;
+    top: 57.2%;
+  }
+}
+
+@media (min-width:961px) and (max-width:1280px) {
+  .section-head {
+    height: 100%;
+  }
+  .strike-m::after {
+    top: 27.9%; 
+  }
+  @keyframes strikeM {
+    0%   { width : 0%; }
+    100% { width: 333%; }
+  }
+  @keyframes strikeE {
+    0%   { width : 0; }
+    100% { width: 300%; }
+  }
+  @keyframes strikeA3 {
+    0%   { width : 0%; }
+    100% { width: 400%; }
+  }
+  .strike-A3::after {
+    /*height: 4px;
+    top: 57%;
+    left: 15%; */
   }
 }

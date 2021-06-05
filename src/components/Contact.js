@@ -5,9 +5,9 @@ import "animate.css/animate.min.css";
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 // import Zoom from '@material-ui/core/Zoom';
-
+import {BookInvModal} from './bookInvModal';
 import bg from '../img/contact.jpg';
 
 import useOnScreen from './functional/useOnScreen';
@@ -207,9 +207,7 @@ function Contact() {
 			        title="Why book with us"
 			    />
 			    <CardActions className={classes.cardbtnarea}>
-		        	<Button size="large" className={classes.btn} >
-		          		book now
-		        	</Button>
+		        	<BookInvModal />
 			    </CardActions>
 			  </div>				 
 	      <div className={classes.textcontainer}>

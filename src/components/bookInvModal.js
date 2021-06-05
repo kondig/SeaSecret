@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
-  btn: {
+  btnSubmit: {
     backgroundColor: '#000000',
     color: '#ffffff',
     textTransform: 'lowercase',
@@ -30,12 +30,39 @@ const useStyles = makeStyles((theme) => ({
       color: '#000000',
     }
   },
+  btn: {
+    backgroundColor: '#ffffff',
+    color: '#000000',
+    textTransform: 'lowercase',
+    '&:hover': {
+      backgroundColor: '#1bdcd1',
+      color: '#000000',
+    },
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      height: '2px',
+      width: '100%',
+      background: 'rgba(0, 0, 0, 0.87)',
+      animationDuration: '3s',
+      animationTimingFunction: 'ease-in',
+      animationIterationCount: 1,
+      animationFillMode: 'forwards',
+      animationName: 'strikeBook',
+      top: '-40%', 
+      left: '-60%',
+      backgroundColor: '#ffffff',  
+    }
+  },
   heading: {
-    textAlign: 'center',
     backgroundColor: '#000000',
-      color: '#ffffff',
-    margin: '0',
-    padding: '10px',
+    color: '#ffffff',
+    textAlign: 'center',
+    textTransform: 'lowercase',
+    '&:hover': {
+      backgroundColor: '#1bdcd1',
+      color: '#000000',
+    }
   },
   formControl: {
     width: '100%',
@@ -58,7 +85,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function BookModal() {
+function BookInvModal() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [message, setMessage] = React.useState();
@@ -142,7 +169,7 @@ function BookModal() {
                             value={message}></textarea>
               </div>
               <div className={classes.btnContainer}>
-                <Button type="submit" size='large' className={classes.btn}>{btntext}</Button>
+                <Button type="submit" size='large' className={classes.btnSubmit}>{btntext}</Button>
               </div>             
             </form>
             <p id="transition-modal-description" className={classes.msg}>{status}</p>
@@ -153,4 +180,4 @@ function BookModal() {
   );
 }
 
-export {BookModal}
+export {BookInvModal}

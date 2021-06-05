@@ -65,7 +65,7 @@ export default function ImageGridList() {
   return (
     <div className={classes.root}>
       <Box display={{ xs: 'block', sm: 'none', md: 'none', lg: 'none', xl: 'none' }}>
-        <GridList cellHeight={170} className={classes.gridList} cols={1}>
+        <GridList cellHeight={300} className={classes.gridList} cols={1}>
           {tileData.map((tile) => (
             <GridListTile key={tile.img} cols={tile.cols || 1}>
               <img src={tile.img} alt={tile.title} className={classes.img} />

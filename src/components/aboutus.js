@@ -131,7 +131,7 @@ function AboutUs(props) {
         />        
       </CardActionArea>
       <CardActions className={classes.cardbtnarea}>
-        <Button size="large" className={classes.btn} href="https://www.axopar.fi/product-configurator/axopar-28-t-top?step=2" >
+        <Button size="large" className={classes.btn} href="https://www.axopar.fi/range/axopar-28-t-top/" >
           more
         </Button>
       </CardActions>

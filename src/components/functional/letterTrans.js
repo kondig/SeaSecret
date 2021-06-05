@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
 		margin: '10px',
 		position: 'relative',
 		[theme.breakpoints.down('sm')]: {
-		    fontSize: '5em',
+		    fontSize: '6em',
 		},
 	},
 	textcontainer: {

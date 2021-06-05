@@ -68,7 +68,7 @@ function Footer() {
           <Copyright  />
         </div>       
         <Toolbar className={classes.smcontainer}>
-          <Link color="inherit" target="_blank" rel="noopener" href="#">
+          <Link color="inherit" target="_blank" rel="noopener" href="mailto:info@seasecret-boattrips.com">
             <MailOutlineIcon className={classes.icon} />
           </Link>
           <Link color="inherit" target="_blank" rel="noopener" href="https://www.facebook.com/seasecretboattrips/">

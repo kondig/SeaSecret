@@ -7,11 +7,11 @@ import "animate.css/animate.min.css";
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 // import Zoom from '@material-ui/core/Zoom';
 
 import bg from '../img/bt1.jpg';
-
+import {BookModal} from './bookModal';
 import useOnScreen from './functional/useOnScreen';
 
 const useStyles = makeStyles(theme => ({
@@ -129,9 +129,7 @@ function BoatTrip1() {
 							<br/><br/>							
 						</p>
 				<CardActions className={classes.cardbtnarea}>
-        	<Button size="large" className={classes.btn} >
-          		book now
-        	</Button>
+        	<BookModal />
 	      </CardActions>							
 			</div>
 			{/*{isOnScreen &&

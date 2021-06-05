@@ -65,6 +65,9 @@ const useStyles = makeStyles((theme) => ({
   logo: {
   	width: '300px'
   },
+  logoSm: {
+  	width: '120px'
+  },
   mi: {
   	zIndex:'1000',
   	'&:hover': {
@@ -74,6 +77,10 @@ const useStyles = makeStyles((theme) => ({
   },
   separator: {
   	height: '35px',
+  },
+  toolbar: {
+  	display: 'flex',
+  	justifyContent: 'space-between',
   }
 }));
 
@@ -95,8 +102,11 @@ function MenuAppBar() {
     <div className={classes.root}>
 	    <Box display={{ xs: 'block', md: 'none', lg: 'none', xl: 'none' }}>
 	      	<AppBar position="static" >
-		        <Toolbar>
-		          	<p className={classes.title}>Sea Secret </p>
+		        <Toolbar className={classes.toolbar}>
+		          	{/*<p className={classes.title}>Sea Secret <span>boat trips</span> </p>*/}
+		          	<div>
+			        		<img src={logo} alt="Sea Secret" className={classes.logoSm} />				           
+			        	</div>
 		            <div>
 		              <IconButton
 		                aria-label="menu"
@@ -147,7 +157,7 @@ function MenuAppBar() {
 	    <Box boxShadow={0} display={{ xs: 'none', md: 'block', lg: 'block', xl: 'block' }}>
 	      	<AppBar position="relative" className={classes.appbardesk} >
 		        <Toolbar className={classes.smcontainer}>
-		        	<Link color="inherit" target="_blank" rel="noopener" href="#">
+		        	<Link color="inherit" target="_blank" rel="noopener" href="mailto:info@seasecret-boattrips.com">
 		            <MailOutlineIcon className={classes.icon} />
 		          </Link>
 		          <Link color="inherit" target="_blank" rel="noopener" href="https://www.facebook.com/seasecretboattrips/">

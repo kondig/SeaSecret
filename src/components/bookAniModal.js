@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme) => ({
 
 
 
-function BookModal() {
+function BookAniModal() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
   const [message, setMessage] = React.useState();
@@ -104,7 +104,7 @@ function BookModal() {
 
   return (
     <div>
-      <Button type="button" size="large" onClick={handleOpen} className={classes.btn}>
+      <Button type="button" size="large" onClick={handleOpen} className="after-strike btn-strike">
         book now
       </Button>
       <Modal
@@ -153,4 +153,4 @@ function BookModal() {
   );
 }
 
-export {BookModal}
+export {BookAniModal}

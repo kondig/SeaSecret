@@ -38,13 +38,16 @@ const useStyles = makeStyles(theme => ({
 		position: 'relative',
 		left: 'calc(-20vw)',
 		[theme.breakpoints.down('sm')]: {
-	    fontSize: '5em',
+	    fontSize: '6em',
 	  },
 	},
 	textcontainer: {
 		margin: '20px 15px',
 		width: '50%',
 		[theme.breakpoints.down('sm')]: {
+	    width: '100%',
+	  },
+	  [theme.breakpoints.down('md')]: {
 	    width: '100%',
 	  },				
 	},
@@ -78,11 +81,12 @@ const useStyles = makeStyles(theme => ({
 	img: {
 		margin: '0 0 0 0',
 		width: '50vw',
-		height: '100%',
+		height: 400,
+		verticalAlign: 'text-bottom',
 		[theme.breakpoints.down('sm')]: {
-      width: '100%',
-      height: 250,
-      backgroundSize: 'contain',
+	      width: '100%',
+	      height: 200,
+	      backgroundSize: 'contain',
 	  },
 	  [theme.breakpoints.down('md')]: {
       width: '100%',
