@@ -364,7 +364,7 @@ h2 p { margin:0px; }
   animation-name: btl;
   height: 2px;
   top: 105%; 
-  left: -170%;
+  left: -180%;
 }
 @keyframes btl {
   0%   { width : 0%; }

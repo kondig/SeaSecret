@@ -121,13 +121,17 @@ function BoatTrip4() {
 							<p className="strike strike-btl trip-title">TOUR AROUND NAXOS</p>
 						</Reveal>
 					}
-					<p className={classes.text}>
-						<br/><br/>
-						Explore the inaccessible beauties of Naxos by just following the coastline.
+					<p className={classes.subtitle}>
+						<br/><br/>							
 					</p>
-					<p className={classes.text}>
-						For a day trip, half-day trip, transfers or action trips
-						<br/><br/>
+					<p className={classes.text}>							
+							Explore the inaccessible beauties of Naxos by just following the coastline all around the island. We will show you the most beautiful bays in Naxos.
+							Possible in combination with a visit n Donoussa, the eastern one of the small Cyclades. Good tour for calm days with snorkel gear and dive scooters
+							or find the wind, wind sports at Donoussa.						
+					</p>
+					<p className={classes.text}>							
+						(Lunch will be in a Tavern of Donoussa or Naxos, shared cost,)
+						<br/><br/>							
 					</p>
 					<CardActions className={classes.cardbtnarea}>
 	        	<BookModal />

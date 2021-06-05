@@ -110,15 +110,17 @@ function BoatTrip3() {
 						</Reveal>
 					}
 					<p className={classes.subtitle}>
-						Search the wind
 						<br/><br/>							
 					</p>
 					<p className={classes.text}>							
-						We will follow the wind to one of the islands of the small Cyclades: Antiparos, Koufonissia, Keros, Schinoussa
-						or Irakleia for wingfoilers incl. or excl. equipment.
+							First stop at Rina bay in the south of Naxos, here we can snorkel in a nice cave and see some under water spring. Crossing over to Pano and Kato Koufonissi,
+							the two islands with beautiful beaches, cliffs (also for cliff jumping) and caves. Very nice snorkel sites and the bay Pori with a nice tavern and good
+							possibilities for wind sports with flat water in the bay and waves outside.						
+					</p>
+					<p className={classes.text}>							
+						(Lunch will be in a Tavern, shared cost)
 						<br/><br/>							
 					</p>
-
 					<CardActions className={classes.cardbtnarea}>
 	        	<BookModal />
         	</CardActions>							

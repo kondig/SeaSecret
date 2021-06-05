@@ -136,14 +136,14 @@ class SectionC extends React.Component {
           descside = {`Possible half and full day trips. With optional equipment rental and instruction.`} 
         />
      		<MediaCard
-					name = { `PRIVATE CHARTER` }
+					name = { `PRIVATE\nCHARTER` }
 					image = { s2c3 }
           desc = { 'You want to spend an unforgettable day on a boat trip with friends or family up to 8 Persons? We can show you some breath taking '
                     + 'places or you just choose your own destination and we bring you wherever you want to go in a distance of maximum 60 nautical miles per day.' }
           descside = {`Ask us for reservations and recommendations, almost everything is possible.`} 
         />
      		<MediaCard
-    			name = { `PRIVATE TRANSFERS` }
+    			name = { `PRIVATE\nTRANSFERS` }
     			image = { s2c4 }
           desc = { 'Want to visit Naoussa on Paros for a nice dinner in the afternoon or evening? We can bring you over and pick '
                     + 'you up again any time you like. Arrival or departure transfers to Paros, Mykonos or Santorini on request.'

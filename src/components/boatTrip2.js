@@ -121,16 +121,16 @@ function BoatTrip2() {
 						</Reveal>
 					}
 					<p className={classes.subtitle}>
-						Choose between the following destinations
 						<br/><br/>
 					</p>
-					<p className={classes.text}>
-						Small Cyclades: <br/>
-						Koufonissia, Iraklia, Schinoussa
+					<p className={classes.text}>							
+							We will pass Paros at the south point and head first to, Tigani and Panderonissi to a beautiful spot for swimming and snorkeling. Also nice on 
+							windy days for wind sports. Turquoise waters with little rock formations and small underwater biotopes. Around the south of Antiparos we will go
+							in a lagoon between Antiparos and Despotiko. Possibility to visit a interesting archaeological site on Despotiko.							
 					</p>
-					<p className={classes.text}>
-						Paros, Antiparos, Tigani and Panderonissi
-						<br/><br/>
+					<p className={classes.text}>							
+						(Lunch will be in a Tavern in Antiparos, shared cost)
+						<br/><br/>							
 					</p>
 					<CardActions className={classes.cardbtnarea}>
 	        	<BookModal />

@@ -112,20 +112,15 @@ function BoatTrip1() {
 							</Reveal>
 						}
 						<p className={classes.subtitle}>
-							Choose between the following destinations
 							<br/><br/>							
 						</p>
 						<p className={classes.text}>							
-							Snorkel trip to the shipwreck Mariana and the bird island Glaronissi							
+							The North tour leads us towards Delos, Rinia and Mykonos. Rinia has some of the most beautiful small bays and beaches in the Aegean for snorkeling, swimming,
+							relaxing and also some very good spots for wind sports, with flat water or waves. A nice combination to have a stopover at Delos and explore the archaeological
+							site, it’s really worth it!							
 						</p>
 						<p className={classes.text}>							
-							Alyko/Pyrgaki for snorkeling and cliff jumping							
-						</p>
-						<p className={classes.text}>							
-							Paros, Naoussa for snorkeling and lunch							
-						</p>
-						<p className={classes.text}>							
-							Paros, Naoussa for sunset and dinner
+							(No Tavern in Rinia or Delos, we will take sandwiches with us, shared cost)
 							<br/><br/>							
 						</p>
 				<CardActions className={classes.cardbtnarea}>
