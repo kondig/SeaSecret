@@ -104,19 +104,17 @@ function SectionA() {
     		<div className={classes.textcontainer}>
 					<p className={classes.title}>ADVENTURE</p>
 					<p className={classes.text}>
-						Beyond the beauty of Naxos that you've probably already experienced, there's a whole new world hidden in the 
-						secret corners that only few people can reach. Let us show you the SEA SECRETS of the island, the hidden
-						treasures that will create your most unique summer memories.							
+						Beyond the beauty of Naxos that you&#39;ve probably already experienced, there&#39;s a whole new world hidden in the secret 
+						corners that only few people can reach. Let us show you the SEA SECRETS of Naxos and the islands around, the hidden treasures
+						that will create your most unique summer memories.							
 					</p>
 					<p className={classes.text}>							
-						Get on board on our beautiful brand new AXOPAR 28 TT for a day of a half-day tour and discover the most well
-						kept secrets of the island.							
+						Get on board on our beautiful new AXOPAR 28 TT for a day of a half-day tour and discover the most well kept secrets of the islands.							
 					</p>
 					<p className={classes.text}>							
-						Explore the charming underwater world of the Aegean Sea with our snorkel equipment while riding one of our 4
-						electric dive scooters, or find the wind and experience your most epic wing foiling windsurfing, or kite surfing
-						sessions on remote spots that every rider dreams about. You can even book your private watersport lesson or rental
-						in advance.
+						Explore the charming underwater world of the Aegean Sea with our snorkel equipment while riding one of our 4 electric dive scooters,
+						or find the wind and experience your most epic wing foiling, windsurfing, or kite surfing sessions on remote spots that every rider
+						dreams about. You can even book your private watersport lesson or rental in advance.
 						<br/><br/>						
 					</p>
 					<p className={classes.text}>							

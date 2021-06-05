@@ -30,6 +30,9 @@ const useStyles = makeStyles(theme => ({
 	  	[theme.breakpoints.down('md')]: {
 	      height: '0'
 	  	},
+	  	[theme.breakpoints.up('xl')]: {
+	      height: '200px'
+	  	},
 	},
 	videoTag: { width: '100%', },
 	mainImage: { width: '100%' },

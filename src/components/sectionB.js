@@ -42,7 +42,7 @@ const useStyles = makeStyles(theme => ({
 	  },
 	},
 	textcontainer: {
-		margin: '20px 15px',
+		
 		width: '50%',
 		[theme.breakpoints.down('sm')]: {
 	    width: '100%',
@@ -54,10 +54,12 @@ const useStyles = makeStyles(theme => ({
 	text: {
 		textAlign: 'left',
 		fontSize: '1.0em',
+		margin: '10px 15px',
 	},
 	title: {
 		textAlign: 'left',
 		fontSize: '1.5em',
+		margin: '10px 15px',
 	},
 	card: {
 		display: 'flex',
@@ -122,10 +124,8 @@ function SectionB() {
 						}
 						<p className={classes.title}>EXPLORE</p>
 						<p className={classes.text}>
-							From relaxing boat trips with snorkeling and relaxation to adventurous water sports
-							getaways and from selected island discoveries to private charters and transfers,
-							choose the trip that better suits your needs and create unforgettable memories for
-							you and your close ones.
+							From relaxing boat trips with snorkeling and relaxation to adventurous water sports getaways and from selected island discoveries
+							to private charters and transfers, choose the trip that better suits your needs and create unforgettable memories for you and your close ones.
 						</p>						
 				</div>				
       </Card>	

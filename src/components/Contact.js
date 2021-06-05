@@ -139,6 +139,12 @@ const useStyles = makeStyles(theme => ({
   			top: '3%',
   			fontSize: '7px',
 		},
+		[theme.breakpoints.down('lg')]: {
+		    left: '0%',
+		},
+		[theme.breakpoints.up('lg')]: {
+		    left: '-20%',
+		},
   },
   banner: {
   	position: 'absolute',
@@ -175,8 +181,16 @@ const useStyles = makeStyles(theme => ({
 		    bottom: '27vh',
 		},
 		[theme.breakpoints.up('sm')]: {
-		    left: '30px',
-		    bottom: '22vh',
+		    left: 0,
+		    bottom: '20vh',
+		},
+		[theme.breakpoints.up('lg')]: {
+		    left: 0,
+		    bottom: '17vh',
+		},
+		[theme.breakpoints.up('xl')]: {
+		    left: 0,
+		    bottom: '17vh',
 		},
   }
 }));

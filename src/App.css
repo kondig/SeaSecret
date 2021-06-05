@@ -255,7 +255,7 @@ h2 p { margin:0px; }
 }
 @keyframes strikeE {
   0%   { width : 0; }
-  100% { width: 126%; }
+  100% { width: 130%; }
 }
 @keyframes strikeC {
   0%   { width : 100%; }
@@ -476,18 +476,27 @@ h2 p { margin:0px; }
     animation-delay: 1s;
     width:0;
     height:0.9px;
-    top: 28%;
+    top: 27.5%;
     left: 98%; 
   }
   @keyframes strikeM {
     0%   { width : 0%; }
-    100% { width: 138%; }
+    100% { width: 97%; }
   }
 }
 
 @media (min-width:601px) and (max-width:960px) {
   .section-head {
     height: 100%;
+  }
+  .section-2-head,
+  .section-3-head {
+    height: 600px; 
+    -webkit-background-size: contain !important;
+    -moz-background-size: contain !important;
+    -o-background-size: contain !important;
+    background-size: contain !important;
+    background-attachment: scroll;
   }
   .strike-A::after {
     height: 5px !important; 
@@ -545,9 +554,25 @@ h2 p { margin:0px; }
     0%   { width : 0%; }
     100% { width: 400%; }
   }
+  @keyframes strikeCon {
+  0%   { width : 0%; }
+  100% { width: 130vw; }
+}
   .strike-A3::after {
     /*height: 4px;
     top: 57%;
     left: 15%; */
   }
+}
+
+@media (min-width:1280px) {
+  @keyframes strikeC {
+    0%   { width : 100%; }
+    100% { width: 900%; }
+  }
+  /*.after-strike {
+    right: -650%;
+    top: 30%;
+    font-size: 2em;
+  }*/
 }

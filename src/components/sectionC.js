@@ -52,6 +52,7 @@ const useStyles = makeStyles( theme => ({
   cardbtnarea: {
   	display: 'flex',
   	justifyContent: 'flex-end',
+    margin: 'auto 0px 0px 0px',
   },
   imagearea: {
     height: '350px',
@@ -92,12 +93,15 @@ function MediaCard(props) {
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.text} >
             {props.desc}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p" className={classes.text} >
+            {props.descside}
           </Typography>          
-      </CardContent>
-      <Divider />
+      </CardContent>    
       <CardActions className={classes.cardbtnarea}>
         <BookModal />
       </CardActions>
+      <Divider />
     </Card>
   );
 }
@@ -114,42 +118,37 @@ class SectionC extends React.Component {
 				<MediaCard
 					name = { `SNORKEL TRIPS\nWITH DIVE SCOOTERS` }
           image = { s2c1 }
-					desc = { 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit augue sed ex pellentesque tincidunt.' 
-                    + ' Phasellus eu lectus a est lobortis feugiat. Ut eget congue nisi. Duis malesuada tempus est. In sed interdum elit, non placerat arcu.'
-                    + ' Vestibulum et tellus risus. Maecenas eleifend elementum mauris. Etiam malesuada scelerisque laoreet. Aenean vitae volutpat urna, nec'
-                    + ' gravida nulla. Nulla ornare feugiat porttitor. Nullam finibus ex quam, non tempor massa pellentesque et. Aliquam auctor lorem non'
-                    + ' neque eleifend suscipit. Maecenas luctus venenatis est eleifend porttitor. Morbi facilisis scelerisque lorem, nec bibendum turpis'
-                    + ' cursus id. Mauris pulvinar posuere velit, quis elementum justo.' }  					
+					desc = { 'Naxos and the surrounding cycladian islands are known for its fantastic coastline with hidden beaches and caves. '
+                    + 'Many of those treasures are not or very difficult to access from land, we will show you some beautiful places and let ' 
+                    + 'you dive in the underwater world of the Cyclades. There are some nice reefs and coves and caves which we have '
+                    + 'found for you to be explored together with us. Ride one of the dive scooters on board and enjoy the crystal clear '
+                    + 'waters of the Aegean sea. On calm days it’s also possible to go to a shipwreck for snorkeling.' }
+          descside = {`Possible half and full day trips.`}  					
    		  />
      		<MediaCard
-					name = { `SEARCH THE WIND` }
+					name = { `SEARCH\nTHE WIND` }
 					image = { s2c2 }
-          desc = { 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit augue sed ex pellentesque tincidunt.' 
-                    + 'Phasellus eu lectus a est lobortis feugiat. Ut eget congue nisi. Duis malesuada tempus est. In sed interdum elit, non placerat arcu.'
-                    + 'Vestibulum et tellus risus. Maecenas eleifend elementum mauris. Etiam malesuada scelerisque laoreet. Aenean vitae volutpat urna, nec'
-                    + 'gravida nulla. Nulla ornare feugiat porttitor. Nullam finibus ex quam, non tempor massa pellentesque et. Aliquam auctor lorem non'
-                    + 'neque eleifend suscipit. Maecenas luctus venenatis est eleifend porttitor. Morbi facilisis scelerisque lorem, nec bibendum turpis'
-                    + 'cursus id. Mauris pulvinar posuere velit, quis elementum justo.' }
+          desc = { 'You are here on Naxos for one of those fantastic water sports? Your Skipper Jan came here 27 years ago for this '
+                    + 'reason; he knows where the wind blows. Let him show you the best spots around the Cyclades. You can bring '
+                    + 'your own equipment or rent it also together with the boat. For those which are beginners or advanced and '
+                    + 'want to take some instruction we offer this as well from the boat and use the latest intercom communication '
+                    + 'Helm system from BB talking, so you can talk all the time with your instructor.' }
+          descside = {`Possible half and full day trips. With optional equipment rental and instruction.`} 
         />
      		<MediaCard
 					name = { `PRIVATE CHARTER` }
 					image = { s2c3 }
-          desc = { 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit augue sed ex pellentesque tincidunt.' 
-                    + 'Phasellus eu lectus a est lobortis feugiat. Ut eget congue nisi. Duis malesuada tempus est. In sed interdum elit, non placerat arcu.'
-                    + 'Vestibulum et tellus risus. Maecenas eleifend elementum mauris. Etiam malesuada scelerisque laoreet. Aenean vitae volutpat urna, nec'
-                    + 'gravida nulla. Nulla ornare feugiat porttitor. Nullam finibus ex quam, non tempor massa pellentesque et. Aliquam auctor lorem non'
-                    + 'neque eleifend suscipit. Maecenas luctus venenatis est eleifend porttitor. Morbi facilisis scelerisque lorem, nec bibendum turpis'
-                    + 'cursus id. Mauris pulvinar posuere velit, quis elementum justo.' }
+          desc = { 'You want to spend an unforgettable day on a boat trip with friends or family up to 8 Persons? We can show you some breath taking '
+                    + 'places or you just choose your own destination and we bring you wherever you want to go in a distance of maximum 60 nautical miles per day.' }
+          descside = {`Ask us for reservations and recommendations, almost everything is possible.`} 
         />
      		<MediaCard
     			name = { `PRIVATE TRANSFERS` }
     			image = { s2c4 }
-          desc = { 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer blandit augue sed ex pellentesque tincidunt.' 
-                    + 'Phasellus eu lectus a est lobortis feugiat. Ut eget congue nisi. Duis malesuada tempus est. In sed interdum elit, non placerat arcu.'
-                    + 'Vestibulum et tellus risus. Maecenas eleifend elementum mauris. Etiam malesuada scelerisque laoreet. Aenean vitae volutpat urna, nec'
-                    + 'gravida nulla. Nulla ornare feugiat porttitor. Nullam finibus ex quam, non tempor massa pellentesque et. Aliquam auctor lorem non'
-                    + 'neque eleifend suscipit. Maecenas luctus venenatis est eleifend porttitor. Morbi facilisis scelerisque lorem, nec bibendum turpis'
-                    + 'cursus id. Mauris pulvinar posuere velit, quis elementum justo.' }
+          desc = { 'Want to visit Naoussa on Paros for a nice dinner in the afternoon or evening? We can bring you over and pick '
+                    + 'you up again any time you like. Arrival or departure transfers to Paros, Mykonos or Santorini on request.'
+                    + 'Looking to spend a few days on one of the small Cyclades, we can bring you there individually any time and pick you up again.' }
+          descside = {`Ask us for reservations.`} 
          		/>
 			</div>
 		);
