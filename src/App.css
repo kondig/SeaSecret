@@ -371,6 +371,15 @@ h2 p { margin:0px; }
   100% { width: 240%; }
 }
 .btn-strike {
+  -webkit-animation-name: textAppear;
+  animation-name: textAppear;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  position: absolute;
   background-color: #000000 !important;
   color: #ffffff !important;
   text-transform: lowercase !important;
@@ -472,17 +481,17 @@ h2 p { margin:0px; }
     right: -200%;
     top: 30%;
   }
-  .strike-m::after {
-    animation-delay: 1s;
-    width:0;
-    height:0.9px;
-    top: 27.5%;
-    left: 98%; 
-  }
   @keyframes strikeM {
     0%   { width : 0%; }
     100% { width: 97%; }
   }
+  .strike-m::after {
+    animation-delay: 1s;
+    width:0;
+    height:0.9px;
+    top: 28.1%;
+    left: 98%; 
+  }  
 }
 
 @media (min-width:601px) and (max-width:960px) {
@@ -491,7 +500,8 @@ h2 p { margin:0px; }
   }
   .section-2-head,
   .section-3-head {
-    height: 600px; 
+    width: 100%;
+    height: 600px;
     -webkit-background-size: contain !important;
     -moz-background-size: contain !important;
     -o-background-size: contain !important;
@@ -510,13 +520,18 @@ h2 p { margin:0px; }
     0%   { width : 0; }
     100% { width: 300%; }
   }
+  @keyframes strikeC {
+  0%   { width : 100%; }
+  100% { width: 850%; }
+}
   .strike-C::after {
     height: 4px;
     top: 50%; 
     left: -150%;
   }
-  .after-strike {   
+  .after-strike {
     top: 30%;
+    right: -600%;
   }
   .strike-m::after {
     animation-delay: 1s;
@@ -538,6 +553,17 @@ h2 p { margin:0px; }
 @media (min-width:961px) and (max-width:1280px) {
   .section-head {
     height: 100%;
+  }
+  .section-2-head,
+  .section-3-head {
+    width: 100%;
+    height: 800px;
+    background-attachment: scroll;
+  }
+  .after-strike {
+    right: -450%;
+    top: 35%;
+    font-size: 1.5em;
   }
   .strike-m::after {
     top: 27.9%; 
@@ -570,9 +596,12 @@ h2 p { margin:0px; }
     0%   { width : 100%; }
     100% { width: 900%; }
   }
-  /*.after-strike {
-    right: -650%;
-    top: 30%;
-    font-size: 2em;
-  }*/
+  .after-strike {
+    right: -640%;
+    top: 35%;
+    font-size: 1.5em;
+  }
+  .strike-C::after {
+    left: -160%;
+  }
 }

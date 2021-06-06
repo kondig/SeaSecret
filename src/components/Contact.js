@@ -174,23 +174,17 @@ const useStyles = makeStyles(theme => ({
   	// flexDirection: 'column',
   	// justifyContent: 'center',
   	position: 'absolute',
-  	bottom: '20vh',
+  	bottom: '20%',
   	left: 0,
   	[theme.breakpoints.down('sm')]: {
 		    left: '30px',
-		    bottom: '27vh',
 		},
 		[theme.breakpoints.up('sm')]: {
-		    left: 0,
-		    bottom: '20vh',
+		    left: '10px',
 		},
-		[theme.breakpoints.up('lg')]: {
+		[theme.breakpoints.up('md')]: {
 		    left: 0,
-		    bottom: '17vh',
-		},
-		[theme.breakpoints.up('xl')]: {
-		    left: 0,
-		    bottom: '17vh',
+		    bottom: '35%',
 		},
   }
 }));

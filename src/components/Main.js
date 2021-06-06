@@ -100,7 +100,7 @@ const Main = () => {
 			</div>
 			<div className="section-2-head" id="bt">
 				<Letter letter={`C`} strike={'strike strike-C'} phrase={`CYCLADES`} duration={3000} 
-						position={{transform:'translate(10vw,25%)'}}
+						position={{transform:'translate(10vw,42%)'}}
 						animator={`animate__animated animate__fadeIn`}  />
 			</div>
 			<div className="section-2-body" >

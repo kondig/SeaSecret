@@ -104,7 +104,7 @@ function BookAniModal() {
 
   return (
     <div>
-      <Button type="button" size="large" onClick={handleOpen} className="after-strike btn-strike">
+      <Button type="button" size="large" onClick={handleOpen} className="btn-strike">
         book now
       </Button>
       <Modal
