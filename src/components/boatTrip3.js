@@ -113,12 +113,17 @@ function BoatTrip3() {
 						<br/><br/>							
 					</p>
 					<p className={classes.text}>							
-							First stop at Rina bay in the south of Naxos, here we can snorkel in a nice cave and see some under water spring. Crossing over to Pano and Kato Koufonissi,
-							the two islands with beautiful beaches, cliffs (also for cliff jumping) and caves. Very nice snorkel sites and the bay Pori with a nice tavern and good
-							possibilities for wind sports with flat water in the bay and waves outside.						
+							Our first stop will be at Rina bay in the south of Naxos, where we can snorkel in a nice cave and explore the
+							underwater spring.						
 					</p>
 					<p className={classes.text}>							
-						(Lunch will be in a Tavern, shared cost)
+							Crossing over to Pano - and Kato Koufonissi, the two great islands hosting beautiful beaches, caves and cliffs
+							(great for cliff jumping). There are also very nice snorkel sites at the bay of Pori where we can then visit a
+							beautifully situated tavern. This tour also holds good possibilities for all wind related sports with flat
+							 water in the bay or in waves just outside of it.						
+					</p>
+					<p className={classes.text}>							
+						(Lunch will be in a Tavern - shared cost)
 						<br/><br/>							
 					</p>
 					<CardActions className={classes.cardbtnarea}>

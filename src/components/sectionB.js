@@ -124,8 +124,10 @@ function SectionB() {
 						}
 						<p className={classes.title}>EXPLORE</p>
 						<p className={classes.text}>
-							From relaxing boat trips with snorkeling and relaxation to adventurous water sports getaways and from selected island discoveries
-							to private charters and transfers, choose the trip that better suits your needs and create unforgettable memories for you and your close ones.
+							From leisure trips with snorkeling, swimming and sunbathing, to explore trips where we discover islands you’ve never
+							heard of, to private charters and transfers, and to adventure trips where we dive into water sports getaways, you
+							have the privilege to choose the trip that suits your interests best; we will create the opportunity for you to jump into
+							unforgettable moments for you and your close ones.
 						</p>						
 				</div>				
       </Card>	

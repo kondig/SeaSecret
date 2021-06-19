@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 	  },
 	},
 	phrase: {
-		fontSize: '2em',
+		fontSize: '3em',
 		margin: '10px',
 		position: 'relative',
 		textAlign: 'right',

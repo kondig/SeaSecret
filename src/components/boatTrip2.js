@@ -82,7 +82,7 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down('md')]: {
 	    width: '100%',
 	    backgroundSize: 'cover',
-			height: 320,
+			height: 500,
 		},
 	},
 	btn: {
@@ -124,9 +124,14 @@ function BoatTrip2() {
 						<br/><br/>
 					</p>
 					<p className={classes.text}>							
-							We will pass Paros at the south point and head first to, Tigani and Panderonissi to a beautiful spot for swimming and snorkeling. Also nice on 
-							windy days for wind sports. Turquoise waters with little rock formations and small underwater biotopes. Around the south of Antiparos we will go
-							in a lagoon between Antiparos and Despotiko. Possibility to visit a interesting archaeological site on Despotiko.							
+							We pass Paros at the southernmost point and head towards Tigani and Panderonissi, which are, because of
+							the crystal clear waters and colors, known as “the Blue Lagoon” islands. They are deliciously perfect for
+							a swim and snorkeling trip but also very nice on windy days for all wind related sports.							
+					</p>
+					<p className={classes.text}>							
+							While snorkeling through the little rock formations in the turquoise waters; you can additionally voyage
+							through several small underwater biotopes. Around the south of Antiparos we will visit another lagoon between
+							Antiparos and Despotiko, where it’s also possible to visit the interesting archaeological site of Despotiko.							
 					</p>
 					<p className={classes.text}>							
 						(Lunch will be in a Tavern in Antiparos, shared cost)

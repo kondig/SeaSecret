@@ -83,7 +83,7 @@ const useStyles = makeStyles(theme => ({
 		[theme.breakpoints.down('md')]: {
 	    width: '100%',
 	    backgroundSize: 'cover',
-			height: 320,
+			height: 400,
 		},
 	},
 	btn: {
@@ -118,19 +118,20 @@ function BoatTrip4() {
     		<div ref={ref} className={classes.textcontainer}>
     			{isOnScreen &&
 		      	<Reveal duration={1000}  effect="animate__animated animate__fadeInDown">
-							<p className="strike strike-btl trip-title">TOUR AROUND NAXOS</p>
+							<p className="strike strike-btl trip-title">TO THE EAST OR AROUND NAXOS</p>
 						</Reveal>
 					}
 					<p className={classes.subtitle}>
 						<br/><br/>							
 					</p>
 					<p className={classes.text}>							
-							Explore the inaccessible beauties of Naxos by just following the coastline all around the island. We will show you the most beautiful bays in Naxos.
-							Possible in combination with a visit n Donoussa, the eastern one of the small Cyclades. Good tour for calm days with snorkel gear and dive scooters
-							or find the wind, wind sports at Donoussa.						
+							Explore the inaccessible beauties of Naxos by just following the coastline all around the island. We will
+							show you the most beautiful bays around this great island. It is also possible to make a combination with a
+							visit to Donoussa , one of the smaller eastern Cyclades. This is a perfect trip for calm days with snorkel
+							gear and dive scooters or search for wind and practices some new or known wind related sports at Donoussa.						
 					</p>
 					<p className={classes.text}>							
-						(Lunch will be in a Tavern of Donoussa or Naxos, shared cost,)
+						(Lunch will be in a Tavern on Naxos or Donoussa - shared cost)
 						<br/><br/>							
 					</p>
 					<CardActions className={classes.cardbtnarea}>

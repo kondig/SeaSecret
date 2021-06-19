@@ -115,12 +115,13 @@ function BoatTrip1() {
 							<br/><br/>							
 						</p>
 						<p className={classes.text}>							
-							The North tour leads us towards Delos, Rinia and Mykonos. Rinia has some of the most beautiful small bays and beaches in the Aegean for snorkeling, swimming,
-							relaxing and also some very good spots for wind sports, with flat water or waves. A nice combination to have a stopover at Delos and explore the archaeological
-							site, it’s really worth it!							
+							The North tour leads us towards Delos, Rineia and Mykonos. Rineia has some of the most beautiful small
+							bays and beaches in the Aegean for snorkeling, swimming and relaxing but also features very good spots
+							for wind related sports with flat water or waves. We can also combine a stopover to the island Delos and
+							explore the archaeological site, which is very spectacular and really worth a visit!							
 						</p>
 						<p className={classes.text}>							
-							(No Tavern in Rinia or Delos, we will take sandwiches with us, shared cost)
+							(There are no Taverns in Rineia or Delos, but we will take sandwiches with us - shared cost)
 							<br/><br/>							
 						</p>
 				<CardActions className={classes.cardbtnarea}>

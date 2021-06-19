@@ -111,6 +111,8 @@ h2 p { margin:0px; }
 .phrase p {
   margin: 0;
   text-align: right;
+  font-size: 1.3em;
+  font-weight: 700;
 }
 .mobile-link {
   outline: none;
@@ -181,9 +183,8 @@ h2 p { margin:0px; }
   display: inline-block;
 }
 .link--menuitem {
-  font-style: italic;
   font-weight: 700;
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 0 10px 20px;
   -webkit-transition: color 0.5s;
   transition: 0.5s;
@@ -267,7 +268,7 @@ h2 p { margin:0px; }
 }
 @keyframes strikeM {
   0%   { width : 0%; }
-  100% { width: 333%; }
+  100% { width: 327%; }
 }
 @keyframes strikeMore {
   0%   { width : 0%; }
@@ -326,8 +327,8 @@ h2 p { margin:0px; }
   animation-name: strikeM;
   animation-delay: 1s;
   width:0;
-  height:1px;
-  top: 28.4%;
+  height: 1.3px;
+  top: 31%;
   left: 98%; 
 }
 
@@ -384,7 +385,7 @@ h2 p { margin:0px; }
   color: #ffffff !important;
   text-transform: lowercase !important;
   right: -345%;
-  top: -23%;
+  top: -40%;
 }
 .btn-strike:hover {
   background-color: #1bdcd1 !important;
@@ -481,6 +482,10 @@ h2 p { margin:0px; }
     right: -200%;
     top: 30%;
   }
+  .phrase p {
+    font-size: 1em;
+    font-weight: 400;
+  }
   @keyframes strikeM {
     0%   { width : 0%; }
     100% { width: 97%; }
@@ -489,7 +494,7 @@ h2 p { margin:0px; }
     animation-delay: 1s;
     width:0;
     height:0.9px;
-    top: 28.1%;
+    top: 27%;
     left: 98%; 
   }  
 }
@@ -537,16 +542,19 @@ h2 p { margin:0px; }
     animation-delay: 1s;
     width:0;
     height:1px;
-    top: 28.1%;
+    top: 30.6%;
     left: 98%; 
   }
   @keyframes strikeM {
     0%   { width : 0%; }
-    100% { width: 333%; }
+    100% { width: 300%; }
   }
   .strike-A3::after {
     height: 4px;
     top: 57.2%;
+  }
+  .btn-strike {
+    right: -320%;
   }
 }
 
@@ -566,11 +574,11 @@ h2 p { margin:0px; }
     font-size: 1.5em;
   }
   .strike-m::after {
-    top: 27.9%; 
+    top: 31%; 
   }
   @keyframes strikeM {
     0%   { width : 0%; }
-    100% { width: 333%; }
+    100% { width: 327%; }
   }
   @keyframes strikeE {
     0%   { width : 0; }

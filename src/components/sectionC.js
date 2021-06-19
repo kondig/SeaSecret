@@ -118,37 +118,43 @@ class SectionC extends React.Component {
 				<MediaCard
 					name = { `SNORKEL TRIPS\nWITH DIVE SCOOTERS` }
           image = { s2c1 }
-					desc = { 'Naxos and the surrounding cycladian islands are known for its fantastic coastline with hidden beaches and caves. '
-                    + 'Many of those treasures are not or very difficult to access from land, we will show you some beautiful places and let ' 
-                    + 'you dive in the underwater world of the Cyclades. There are some nice reefs and coves and caves which we have '
-                    + 'found for you to be explored together with us. Ride one of the dive scooters on board and enjoy the crystal clear '
-                    + 'waters of the Aegean sea. On calm days it’s also possible to go to a shipwreck for snorkeling.' }
-          descside = {`Possible half and full day trips.`}  					
+					desc = {'Naxos and the surrounding Cycladic islands are known for its fantastic coastlines with hidden caves, ' 
+                    + 'beaches and bays. Many of those treasures are not easily ventured to, or are very difficult to access '
+                    + 'from land. But we are able to show you these remote places and enjoy the crystal clear water beneath '
+                    + 'the surface of the Aegean Sea. With our grab & go scooters enjoy a pull from the propellers '
+                    + 'underwater faster than most people swim at full sprint.' }
+
+          descside = {`On calm days it is also possible to visit the shipwreck Marianna, where one can snorkel around the
+                       part of the crane which is sticking out of the surface of the sea and through the main body of the
+                       sunken ship under water. Half and full day trips available.`}  					
    		  />
      		<MediaCard
-					name = { `SEARCH\nTHE WIND` }
+					name = { `SEARCH THE WIND\nFOR WING FOILERS, WINDSURFERS OR KITE SURFERS` }
 					image = { s2c2 }
-          desc = { 'You are here on Naxos for one of those fantastic water sports? Your Skipper Jan came here 27 years ago for this '
-                    + 'reason; he knows where the wind blows. Let him show you the best spots around the Cyclades. You can bring '
-                    + 'your own equipment or rent it also together with the boat. For those which are beginners or advanced and '
-                    + 'want to take some instruction we offer this as well from the boat and use the latest intercom communication '
-                    + 'Helm system from BB talking, so you can talk all the time with your instructor.' }
-          descside = {`Possible half and full day trips. With optional equipment rental and instruction.`} 
+          desc = { `Have you come to Naxos to make the most out of watersports? Then you should meet your Skipper Jan,
+            who came here 27 years ago for this one and only reason, he knows where to find the wind at its best!
+            Let him show you the best spots around the Cyclades. You can bring your own equipment or rent it together
+            with the boat. For those who are beginners or advanced and want to take some instruction we also offer lessons
+            from the boat with the latest intercom communication Helm system from BB talking, which allow you to
+            communicate with your instructor whilst being out on the water practicing these epic board sports.` }
+          descside = {`Half and full day trips available. With optional equipment rental and instruction.`} 
         />
      		<MediaCard
 					name = { `PRIVATE\nCHARTER` }
 					image = { s2c3 }
-          desc = { 'You want to spend an unforgettable day on a boat trip with friends or family up to 8 Persons? We can show you some breath taking '
-                    + 'places or you just choose your own destination and we bring you wherever you want to go in a distance of maximum 60 nautical miles per day.' }
-          descside = {`Ask us for reservations and recommendations, almost everything is possible.`} 
+          desc = { `Want an unforgettable day on a boat trip with friends or family? ( up to 8 persons)` }
+          descside = {`Let us show you some breathtaking places or just choose your own destination and we will take you
+            wherever you want to go within a distance up to a maximum of 60 nautical miles. Ask us for reservations
+            and recommendations; almost everything is possible.`} 
         />
      		<MediaCard
     			name = { `PRIVATE\nTRANSFERS` }
     			image = { s2c4 }
-          desc = { 'Want to visit Naoussa on Paros for a nice dinner in the afternoon or evening? We can bring you over and pick '
-                    + 'you up again any time you like. Arrival or departure transfers to Paros, Mykonos or Santorini on request.'
-                    + 'Looking to spend a few days on one of the small Cyclades, we can bring you there individually any time and pick you up again.' }
-          descside = {`Ask us for reservations.`} 
+          desc = { `A visit to Naoussa on Paros for a nice dinner in the afternoon or evening is one of the options we offer
+            when booking a private transfer. We will drive you over to your desired location, and then pick you up any time
+            you like. Arrival or departure transfers to Paros, Mykonos or Santorin on request.` }
+          descside = {`If you are looking to spend a few days on one of the small Cyclades, we can bring you there individually
+           any time and/or pick you up. Ask us for reservations and possibilities.`} 
          		/>
 			</div>
 		);

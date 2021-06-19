@@ -96,18 +96,22 @@ function AboutUs(props) {
             {isOnScreen &&
               <Reveal duration={400} effect="animate__animated animate__fadeInDown">
                 <p className={classes.text}>
-                  For the last 27 years we have been dedicating our passion to the Flisvos Sportclub, welcoming people from all around the
-                  world not only to out water sports centers, but to out accomodations and restaurant, our shops and our hearts. And for those
-                  last 27 years, we keep falling in love with this island again and again, discovering every time something new. This hapiness is
-                  so great that it wouldn't be fair not to share.
+                  For the last 27 years we have been dedicating ourselves to our passion &amp; love for watersports, and
+                  facilitating that for others to experience too at our base, the Flisvos Sportclub. Welcoming people from
+                  all around the world into what we have built at our water sports centers, accommodation, shops and our
+                  fantastic restaurant, with all our heart. With those last 27 years, we have fallen in love repeatedly
+                  with this islands and what it has to offer, discovering something new every time. This happiness is so
+                  great that it’s only fair for us to share it.
                 </p>
               </Reveal>
             }
             {isOnScreen &&
               <Reveal duration={400} effect="animate__animated animate__fadeInDown">
                 <p className={classes.text}>
-                  Let us show you the secrets that make us feel so connected to this blessed place. And if you are a water sports lover, things get
-                  even better: a boat equipped with the latest high-end gear brings you to a private windy spot for a session to remember.
+                  Let us show you the secrets that make us feel so connected to this blessed place. And if you are a water sports lover,
+                  you’ll love a trip with us even more: a high speed boat, equipped with the latest sport gear, bringing you to a
+                  private windy spot for a session to remember, clear waters, summer breeze, refreshments and a dedicated skipper,
+                   what’s not to love?
                 </p>
               </Reveal>
             }

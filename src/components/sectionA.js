@@ -104,24 +104,28 @@ function SectionA() {
     		<div className={classes.textcontainer}>
 					<p className={classes.title}>ADVENTURE</p>
 					<p className={classes.text}>
-						Beyond the beauty of Naxos that you&#39;ve probably already experienced, there&#39;s a whole new world hidden in the secret 
-						corners that only few people can reach. Let us show you the SEA SECRETS of Naxos and the islands around, the hidden treasures
-						that will create your most unique summer memories.							
+						Beyond the beauty of Naxos that you might have already experienced, there&#39;s a whole world of ocean blues and
+						hidden corners that only few people can reach. Let us show you these SEASECRETS, the hidden treasures of Naxos and
+						the islands around it that will create your most unique summer memories.							
 					</p>
 					<p className={classes.text}>							
-						Get on board on our beautiful new AXOPAR 28 TT for a day of a half-day tour and discover the most well kept secrets of the islands.							
+						Step aboard on our beautiful new AXOPAR 28 TT for one of our day or half-day tours and discover the most well kept
+						secrets of the Cycladic islands.							
 					</p>
 					<p className={classes.text}>							
-						Explore the charming underwater world of the Aegean Sea with our snorkel equipment while riding one of our 4 electric dive scooters,
-						or find the wind and experience your most epic wing foiling, windsurfing, or kite surfing sessions on remote spots that every rider
-						dreams about. You can even book your private watersport lesson or rental in advance.
+						Explore the charming underwater world of the Aegean Sea with our snorkel equipment, riding one of our 5 dive
+						scooters, or catch the wind and experience your most epic wing foiling, windsurfing, or kite surfing sessions on
+						remote spots that every rider dreams about. You can also book private watersport lesson or rent our equipment in
+						advance.
 						<br/><br/>						
 					</p>
 					<p className={classes.text}>							
 						Included are:<br/>
-						Boat with skipper,<br/> gasoline,<br/> refreshments (water, soft drinks and fruits),<br/> the use of snorkel equipment and 4
-						dive scooters.<br/>
-						<br/>Optional sport equipment rental and courses are bookable.
+						Our knowledgeable, good vibes and experienced skipper Jan (English, German &amp; Greek speaking).<br/>
+						Refreshments incl. water, soft drinks, occasional beers and fresh local fruits.<br/>
+						A guide to the best cliff diving, snorkeling and swimming spots.<br/>
+						The use of snorkel equipment and 5 dive scooters to wiz through the crystal clear turquoise water.<br/>
+						Optional : renting of sport equipment and courses.
 						<br/><br/>
 					</p>			
 				</div>
