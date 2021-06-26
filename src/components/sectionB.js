@@ -82,7 +82,7 @@ const useStyles = makeStyles(theme => ({
 	},
 	img: {
 		margin: '0 0 0 0',
-		width: '50vw',
+		width: '50%',
 		height: 400,
 		verticalAlign: 'text-bottom',
 		[theme.breakpoints.down('sm')]: {

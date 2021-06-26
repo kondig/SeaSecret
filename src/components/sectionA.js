@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import "animate.css/animate.min.css";
-import bg from '../img/s2p1.png';
+import bg from '../img/s2p1.jpg';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -80,9 +80,10 @@ const useStyles = makeStyles(theme => ({
 	},
 	img: {
 		margin: '0 0 0 0',
-		width: '50vw',
+		width: '50%',
 		height: 400,
-		verticalAlign: 'text-bottom',
+		// verticalAlign: 'text-bottom',
+		verticalAlign: 'top',
 		[theme.breakpoints.down('sm')]: {
 	      width: '100%',
 	      height: 200,

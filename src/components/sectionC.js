@@ -129,7 +129,7 @@ class SectionC extends React.Component {
                        sunken ship under water. Half and full day trips available.`}  					
    		  />
      		<MediaCard
-					name = { `SEARCH THE WIND\nFOR WING FOILERS, WINDSURFERS OR KITE SURFERS` }
+					name = { `'SEARCH THE WIND'\nFOR WING FOILERS, WINDSURFERS OR KITE SURFERS` }
 					image = { s2c2 }
           desc = { `Have you come to Naxos to make the most out of watersports? Then you should meet your Skipper Jan,
             who came here 27 years ago for this one and only reason, he knows where to find the wind at its best!

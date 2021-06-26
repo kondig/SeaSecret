@@ -10,13 +10,13 @@ import CardMedia from '@material-ui/core/CardMedia';
 // import Button from '@material-ui/core/Button';
 // import Zoom from '@material-ui/core/Zoom';
 import {BookModal} from './bookModal';
-import bg from '../img/bt4.jpg';
+import bg from '../img/bt4.jpeg';
 import useOnScreen from './functional/useOnScreen';
 
 const useStyles = makeStyles(theme => ({
 	root: {
     margin: '50px auto',
-    width: '60%',
+    width: '70%',
     display: 'flex',
     alignItems: 'start',
     flexDirection: 'column',

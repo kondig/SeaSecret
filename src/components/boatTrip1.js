@@ -17,7 +17,7 @@ import useOnScreen from './functional/useOnScreen';
 const useStyles = makeStyles(theme => ({
 	root: {
     margin: '50px auto',
-    width: '60%',
+    width: '70%',
     display: 'flex',
     alignItems: 'start',
     flexDirection: 'column',

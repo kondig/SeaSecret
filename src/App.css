@@ -78,7 +78,7 @@ body {
   align-items: flex-start;
   align-content: flex-start;
 }
-.section-2-head { background-image: url('./img/p2.jpg'); overflow: hidden; }
+.section-2-head { background-image: url('./img/p2.jpeg'); overflow: hidden; }
 .section-3-head { background-image: url('./img/p3.jpg'); }
 .section-2-body { margin-bottom: 150px; }
 .section-3-body {
@@ -302,8 +302,8 @@ h2 p { margin:0px; }
 .strike-E::after {
   -webkit-animation-name: strikeE;
   animation-name: strikeE;
-  height: 10px;
-  top: 46.4%; 
+  height: 8px;
+  top: 47.2%; 
   left: -120%;
 }
 .strike-C::after {
@@ -327,8 +327,8 @@ h2 p { margin:0px; }
   animation-name: strikeM;
   animation-delay: 1s;
   width:0;
-  height: 1.3px;
-  top: 31%;
+  height: 1.5px;
+  top: 30.8%;
   left: 98%; 
 }
 
@@ -494,7 +494,7 @@ h2 p { margin:0px; }
     animation-delay: 1s;
     width:0;
     height:0.9px;
-    top: 27%;
+    top: 28.6%;
     left: 98%; 
   }  
 }
@@ -541,8 +541,8 @@ h2 p { margin:0px; }
   .strike-m::after {
     animation-delay: 1s;
     width:0;
-    height:1px;
-    top: 30.6%;
+    height:1.3px;
+    top: 30.9%;
     left: 98%; 
   }
   @keyframes strikeM {
