@@ -61,10 +61,19 @@ const useStyles = makeStyles( theme => ({
       height: '250px',
     },
   },
+  title: {
+    textAlign: 'center',
+    fontSize: '1.5em'
+  },
+  subtitle: {
+    textAlign: 'center',
+    fontSize: '0.9em'
+  },
   text: {
     textAlign: 'left',
     fontSize: '0.8em',
-  }
+  },
+  
 }));
 
 function BreakLine(props) {
@@ -88,8 +97,11 @@ function MediaCard(props) {
         />        
       </CardActionArea>
       <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom component="h2" className={classes.title}>
             <BreakLine text={props.name} />
+          </Typography>
+          <Typography variant="body2" component="h4" className={classes.subtitle} >
+            <BreakLine text={props.subtitle} />
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p" className={classes.text} >
             {props.desc}
@@ -116,7 +128,8 @@ class SectionC extends React.Component {
 		return (
 			<div className="card-container">
 				<MediaCard
-					name = { `SNORKEL TRIPS\nWITH DIVE SCOOTERS` }
+					name = { `SNORKEL TRIPS` }
+          subtitle = { `WITH DIVE SCOOTERS\n \n` }
           image = { s2c1 }
 					desc = {'Naxos and the surrounding Cycladic islands are known for its fantastic coastlines with hidden caves, ' 
                     + 'beaches and bays. Many of those treasures are not easily ventured to, or are very difficult to access '
@@ -129,7 +142,8 @@ class SectionC extends React.Component {
                        sunken ship under water. Half and full day trips available.`}  					
    		  />
      		<MediaCard
-					name = { `'SEARCH THE WIND'\nFOR WING FOILERS, WINDSURFERS OR KITE SURFERS` }
+					name = { `'SEARCH THE WIND'` }
+          subtitle = { `FOR WING FOILERS, WINDSURFERS OR KITE SURFERS` }
 					image = { s2c2 }
           desc = { `Have you come to Naxos to make the most out of watersports? Then you should meet your Skipper Jan,
             who came here 27 years ago for this one and only reason, he knows where to find the wind at its best!
@@ -141,6 +155,7 @@ class SectionC extends React.Component {
         />
      		<MediaCard
 					name = { `PRIVATE\nCHARTER` }
+          subtitle = { `` }
 					image = { s2c3 }
           desc = { `Want an unforgettable day on a boat trip with friends or family? ( up to 8 persons)` }
           descside = {`Let us show you some breathtaking places or just choose your own destination and we will take you
@@ -149,6 +164,7 @@ class SectionC extends React.Component {
         />
      		<MediaCard
     			name = { `PRIVATE\nTRANSFERS` }
+          subtitle = { `` }
     			image = { s2c4 }
           desc = { `A visit to Naoussa on Paros for a nice dinner in the afternoon or evening is one of the options we offer
             when booking a private transfer. We will drive you over to your desired location, and then pick you up any time

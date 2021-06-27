@@ -438,8 +438,8 @@ h2 p { margin:0px; }
     100% { width: 120%; }
   }
   .strike-E::after {
-    height: 5px;
-    top: 47.3%; 
+    height: 6px;
+    top: 46.6%; 
     left: -50%;
   }
   @keyframes strikeE {
@@ -494,7 +494,7 @@ h2 p { margin:0px; }
     animation-delay: 1s;
     width:0;
     height:0.9px;
-    top: 28.6%;
+    top: 27.7%;
     left: 98%; 
   }  
 }

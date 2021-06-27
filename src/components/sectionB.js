@@ -113,7 +113,15 @@ function SectionB() {
 	        title=""
 	    	/> 	
       	<div ref={ref} className={classes.textcontainer}>
-      			{isOnScreen ?
+      			
+						<p className={classes.title}>EXPLORE</p>
+						<p className={classes.text}>
+							From leisure trips with snorkeling, swimming and sunbathing, to explore trips where we discover islands you’ve never
+							heard of, to private charters and transfers, and to adventure trips where we dive into water sports getaways, you
+							have the privilege to choose the trip that suits your interests best; we will create the opportunity for you to jump into
+							unforgettable moments for you and your close ones.
+						</p>
+						{isOnScreen ?
 	    				<div className="strike strike-E"> 
 								<Reveal duration={2000} effect="animate__animated animate__fadeIn">
 								  <div className={classes.letter}>E</div>
@@ -121,14 +129,7 @@ function SectionB() {
 							</div>
 							:
 							<div  className={classes.letter}>E</div>
-						}
-						<p className={classes.title}>EXPLORE</p>
-						<p className={classes.text}>
-							From leisure trips with snorkeling, swimming and sunbathing, to explore trips where we discover islands you’ve never
-							heard of, to private charters and transfers, and to adventure trips where we dive into water sports getaways, you
-							have the privilege to choose the trip that suits your interests best; we will create the opportunity for you to jump into
-							unforgettable moments for you and your close ones.
-						</p>						
+						}						
 				</div>				
       </Card>	
 		</div>
