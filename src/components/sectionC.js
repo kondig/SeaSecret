@@ -61,13 +61,17 @@ const useStyles = makeStyles( theme => ({
       height: '250px',
     },
   },
+  cardtxtarea: {
+    padding: '16px 7px'
+  },
   title: {
     textAlign: 'center',
     fontSize: '1.5em'
   },
   subtitle: {
     textAlign: 'center',
-    fontSize: '0.9em'
+    fontSize: '0.7em',
+    lineHeight: '2.2em',
   },
   text: {
     textAlign: 'left',
@@ -96,7 +100,7 @@ function MediaCard(props) {
           className="suiteImage"
         />        
       </CardActionArea>
-      <CardContent>
+      <CardContent className={classes.cardtxtarea}>
           <Typography gutterBottom component="h2" className={classes.title}>
             <BreakLine text={props.name} />
           </Typography>
@@ -129,7 +133,7 @@ class SectionC extends React.Component {
 			<div className="card-container">
 				<MediaCard
 					name = { `SNORKEL TRIPS` }
-          subtitle = { `WITH DIVE SCOOTERS\n \n` }
+          subtitle = { `WITH DIVE SCOOTERS` }
           image = { s2c1 }
 					desc = {'Naxos and the surrounding Cycladic islands are known for its fantastic coastlines with hidden caves, ' 
                     + 'beaches and bays. Many of those treasures are not easily ventured to, or are very difficult to access '
@@ -143,7 +147,7 @@ class SectionC extends React.Component {
    		  />
      		<MediaCard
 					name = { `'SEARCH THE WIND'` }
-          subtitle = { `FOR WING FOILERS, WINDSURFERS OR KITE SURFERS` }
+          subtitle = { `FOR WING FOILERS, WIND OR KITE SURFERS` }
 					image = { s2c2 }
           desc = { `Have you come to Naxos to make the most out of watersports? Then you should meet your Skipper Jan,
             who came here 27 years ago for this one and only reason, he knows where to find the wind at its best!

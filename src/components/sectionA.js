@@ -27,8 +27,7 @@ const useStyles = makeStyles(theme => ({
 	    flexBasis: '100%',
 	    backgroundColor:'#transparent'
 	},
-	textcontainer: {
-		padding: '20px 15px',
+	textcontainer: {		
 		width: '50%',
 		backgroundColor: 'transparent',
   //   backgroundImage: `url(${bg})`,
@@ -37,9 +36,9 @@ const useStyles = makeStyles(theme => ({
 		// backgroundRepeat: 'no-repeat',
 		// backgroundSize: '50%',
 		// animation: 'animatedRtL 2s ease-in 1 normal',
-		position: 'absolute',
-		left: '25%',
-		transform: 'translateY(-25%)',
+		// position: 'absolute',
+		// left: '25%',
+		// transform: 'translateY(-35%)',
 		[theme.breakpoints.down('sm')]: {
 	    width: '100%',
 	    position: 'relative',
@@ -58,17 +57,19 @@ const useStyles = makeStyles(theme => ({
 	text: {
 		textAlign: 'left',
 		fontSize: '1.0em',
+		padding: '0px 15px',
 	},
 	title: {
 		textAlign: 'left',
 		fontSize: '1.5em',
+		padding: '0px 15px',
 	},
 	card: {
 		position: 'relative',
 		overflow: 'visible',
 		display: 'flex',
 		flexDirection: 'row',
-		justifyContent: 'flex-end',
+		justifyContent: 'space-between',
 		alignItems: 'center',
 		flexWrap: 'wrap',
 		boxShadow: '0 0 0 0',
@@ -81,17 +82,18 @@ const useStyles = makeStyles(theme => ({
 	img: {
 		margin: '0 0 0 0',
 		width: '50%',
-		height: 400,
+		height: 500,
+		alignSelf: 'end',
 		// verticalAlign: 'text-bottom',
 		verticalAlign: 'top',
 		[theme.breakpoints.down('sm')]: {
 	      width: '100%',
-	      height: 200,
+	      height: 300,
 	      backgroundSize: 'contain',
 	  },
 	  [theme.breakpoints.down('md')]: {
       width: '100%',
-      height: 400,
+      height: 500,
       backgroundSize: 'cover',
     },
 	}, 

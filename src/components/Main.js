@@ -23,14 +23,14 @@ const useStyles = makeStyles(theme => ({
 		position: 'relative',
 	},
 	random: {
-		height: '100px',
+		height: '120px',
 		[theme.breakpoints.down('sm')]: {
 	      height: '0'
 	  	},
 	  	[theme.breakpoints.down('md')]: {
 	      height: '0'
 	  	},
-	  	[theme.breakpoints.up('xl')]: {
+	  	[theme.breakpoints.up('lg')]: {
 	      height: '200px'
 	  	},
 	},
@@ -48,6 +48,9 @@ const useStyles = makeStyles(theme => ({
 	},
 	mainLoader: {
 		alignSelf: 'center',
+	},
+	ltrA: {
+		transform:'translate(0%,-10%)'
 	}
 }));
 
@@ -90,9 +93,9 @@ const Main = () => {
 			</div>
 			<div className="section-1-intro">
 				<Letter letter={`A`} strike={'strike strike-A'} duration={2000} 
-						position={{transform:'translate(-30%,10%)'}}
+						position={{transform:'translate(-30%, -30%)'}}
 						animator={`animate__animated animate__fadeIn`}  />
-				<div className={classes.random}></div>				
+				{/*<div className={classes.random}></div>*/}				
 				<SectionA />
 				<SectionB />
 				<div id="tours"></div>

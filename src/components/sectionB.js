@@ -59,7 +59,7 @@ const useStyles = makeStyles(theme => ({
 	title: {
 		textAlign: 'left',
 		fontSize: '1.5em',
-		margin: '10px 15px',
+		padding: '0px 15px',
 	},
 	card: {
 		display: 'flex',
@@ -92,7 +92,7 @@ const useStyles = makeStyles(theme => ({
 	  },
 	  [theme.breakpoints.down('md')]: {
       width: '100%',
-      height: 400,
+      height: 500,
       backgroundSize: 'cover',
     },
 	}

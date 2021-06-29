@@ -1,5 +1,5 @@
 # Sea Secret
-v0.8
+v0.9
 
 
 ## Single-page React app with ReactRouter
