@@ -88,20 +88,12 @@ const useStyles = makeStyles((theme) => ({
 function BookInvModal() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-<<<<<<< HEAD
-  const [message, setMessage] = React.useState();
-  const [name, setName] = React.useState();
-  const [email, setEmail] = React.useState();
-  const [status, setStatus] = React.useState('');
-  const [btntext, setBtntext] = React.useState('Submit');
-=======
   const [email, setEmail] = React.useState('');
   const [name, setName] = React.useState('');
   const [message, setMessage] = React.useState('');
   const [status, setStatus] = React.useState('');
   const [btntext, setBtntext] = React.useState('Submit');
   const [isSubmitting, setIsSubmitting] = React.useState(false);
->>>>>>> c498c8b (rebuild + form validation)
 
   const handleOpen = () => {
     setOpen(true);
@@ -112,22 +104,6 @@ function BookInvModal() {
   };
 
   const handleSubmit= (e) => {
-<<<<<<< HEAD
-      e.preventDefault();
-      // console.log(name,email,message);
-      setBtntext('Sending...');
-      emailjs.send('service_q5rphf9','SSbt-4cqaecd', templateParams, 'user_G3PrDBibDDPOlb11ZGcMO')
-      .then((response) => {
-        showMsg();
-        setBtntext('Sent'); 
-        setTimeout(() => { resetForm(); }, 6000)
-        console.log('SUCCESS!', response.status, response.text);
-      }, (err) => {
-        setBtntext('Failed to send');
-         console.log('FAILED...', err);
-      });
-    }
-=======
     e.preventDefault();
     // Prevent double submit
     if (isSubmitting) return;
@@ -154,7 +130,6 @@ function BookInvModal() {
       console.log('FAILED...', err);
     });
   }
->>>>>>> c498c8b (rebuild + form validation)
 
   const templateParams = {
       name: name,
@@ -192,21 +167,13 @@ function BookInvModal() {
                   <label htmlFor="name">Name</label>
                   <input type="text" className={classes.formControl} 
                          onChange={e => setName(e.target.value)}
-<<<<<<< HEAD
-                         value={name} />
-=======
                          value={name} required />
->>>>>>> c498c8b (rebuild + form validation)
               </div>
               <div className={classes.formGroup}>
                   <label htmlFor="exampleInputEmail1">Email address</label>
                   <input type="email" className={classes.formControl} aria-describedby="emailHelp" 
                          onChange={e => setEmail(e.target.value)}
-<<<<<<< HEAD
-                         value={email} />
-=======
                          value={email} required />
->>>>>>> c498c8b (rebuild + form validation)
               </div>
               <div className={classes.formGroup}>
                   <label htmlFor="message">Message</label>
@@ -215,13 +182,9 @@ function BookInvModal() {
                             value={message}></textarea>
               </div>
               <div className={classes.btnContainer}>
-<<<<<<< HEAD
-                <Button type="submit" size='large' className={classes.btnSubmit}>{btntext}</Button>
-=======
                 <Button type="submit" size='large' className={classes.btnSubmit} disabled={isSubmitting}>
                   {btntext}
                 </Button>
->>>>>>> c498c8b (rebuild + form validation)
               </div>             
             </form>
             <p id="transition-modal-description" className={classes.msg}>{status}</p>

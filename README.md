@@ -1,29 +1,18 @@
 # Sea Secret
-v0.9
+v1.1
 
 
-## Single-page React app with ReactRouter
+## Single-page React app
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Contains:
+- contact form
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Credits/Dependencies
+### [mui](https://mui.com/)
+### [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+### [react-animate-on-scroll](https://www.npmjs.com/package/react-animate-on-scroll)
+### [emailjs](https://www.npmjs.com/package/emailjs-com)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
