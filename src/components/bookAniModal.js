@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '5px',
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
+    minWidth: '300px'
   },
   btn: {
     backgroundColor: '#000000',
@@ -45,8 +46,9 @@ const useStyles = makeStyles((theme) => ({
   },
   formGroup: {
     display: 'flex',
+    flexDirection: 'column',
     justifyContent: 'space-between',
-    flexWrap: 'wrap',
+    flexWrap: 'no-wrap',
     margin: '10px 0px',
   },
   btnContainer: {
@@ -61,11 +63,12 @@ const useStyles = makeStyles((theme) => ({
 function BookAniModal() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
-  const [message, setMessage] = React.useState();
-  const [name, setName] = React.useState();
-  const [email, setEmail] = React.useState();
+  const [email, setEmail] = React.useState('');
+  const [name, setName] = React.useState('');
+  const [message, setMessage] = React.useState('');
   const [status, setStatus] = React.useState('');
   const [btntext, setBtntext] = React.useState('Submit');
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
 
   const handleOpen = () => {
     setOpen(true);
@@ -76,30 +79,40 @@ function BookAniModal() {
   };
 
   const handleSubmit= (e) => {
-      e.preventDefault();
-      // console.log(name,email,message);
-      setBtntext('Sending...');
-      emailjs.send('service_q5rphf9','SSbt-4cqaecd', templateParams, 'user_G3PrDBibDDPOlb11ZGcMO')
-      .then((response) => {
-        showMsg();
-        setBtntext('Sent'); 
-        setTimeout(() => { resetForm(); }, 6000)
-        console.log('SUCCESS!', response.status, response.text);
-      }, (err) => {
-        setBtntext('Failed to send');
-         console.log('FAILED...', err);
-      });
-    }
-
+    e.preventDefault();
+    // Prevent double submit
+    if (isSubmitting) return;
+    // Basic validation
+    if (!name.trim()) { alert('Please enter your name'); return; }
+    if (!email.trim()) { alert('Please enter your email'); return; }
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) { alert('Please enter a valid email address'); return; }
+    setIsSubmitting(true);
+    setBtntext('Sending...');
+    emailjs.send('service_q5rphf9','SSbt-4cqaecd', templateParams, 'user_G3PrDBibDDPOlb11ZGcMO')
+    .then((response) => {
+      showMsg();
+      setBtntext('Sent'); 
+      setTimeout(() => { 
+        resetForm();
+        setIsSubmitting(false); 
+      }, 6000)
+      console.log('SUCCESS!', response.status, response.text);
+    }, (err) => {
+      setBtntext('Failed to send');
+      setIsSubmitting(false);
+      console.log('FAILED...', err);
+    });
+  }
   const templateParams = {
       name: name,
       message: message,
       email: email
   };
- 
-
-
-  const resetForm = () => { setName(''); setEmail(''); setMessage(''); setBtntext('Submit'); setStatus('');}
+  const resetForm = () => { setName(''); setEmail(''); setMessage(''); 
+                            setBtntext('Submit'); setStatus('');  setIsSubmitting(false);
+                          }
   const showMsg = () => { setStatus('Thank you for contacting us!')}
 
   return (
@@ -127,22 +140,24 @@ function BookAniModal() {
                   <label htmlFor="name">Name</label>
                   <input type="text" className={classes.formControl} 
                          onChange={e => setName(e.target.value)}
-                         value={name} />
+                         value={name} required />
               </div>
               <div className={classes.formGroup}>
                   <label htmlFor="exampleInputEmail1">Email address</label>
                   <input type="email" className={classes.formControl} aria-describedby="emailHelp" 
                          onChange={e => setEmail(e.target.value)}
-                         value={email} />
+                         value={email} required />
               </div>
               <div className={classes.formGroup}>
                   <label htmlFor="message">Message</label>
-                  <textarea className={classes.formControl} rows="5"
+                  <textarea className={classes.formControl} rows="6" nname="message"
                             onChange={e => setMessage(e.target.value)}
                             value={message}></textarea>
               </div>
               <div className={classes.btnContainer}>
-                <Button type="submit" size='large' className={classes.btn}>{btntext}</Button>
+                <Button type="submit" size='large' className={classes.btn} disabled={isSubmitting}>
+                  {btntext}
+                </Button>
               </div>             
             </form>
             <p id="transition-modal-description" className={classes.msg}>{status}</p>
